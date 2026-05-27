@@ -124,9 +124,11 @@ body {
 .hamburger.open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
+
 .hamburger.open span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
@@ -219,7 +221,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 16px;
+  gap: 10px;
+  margin-top: -70px;
   padding: 0 24px;
   max-width: 860px;
 }
@@ -285,7 +288,7 @@ body {
 /* Hero Stats */
 .hero-stats {
   position: absolute;
-  bottom: 38px;
+  bottom: 58px;
   left: 60px;
   z-index: 2;
   display: flex;
@@ -350,6 +353,7 @@ body {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -359,7 +363,7 @@ body {
 /* ── RESPONSIVE ─────────────────────────────── */
 @media (max-width: 768px) {
   .hero-logo {
-    width: 160px;
+    width: 150px;
   }
 
   .hero-tagline {
@@ -381,7 +385,7 @@ body {
   }
 
   .hero-stats {
-    bottom: 28px;
+    bottom: 58px;
     left: 24px;
     gap: 18px;
   }
@@ -527,22 +531,18 @@ body {
 .sg-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.92) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0.1) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.1) 100%);
   transition: background 0.4s ease;
 }
 
 .sg-card:hover .sg-card-overlay {
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 0.6) 50%,
-    rgba(0, 0, 0, 0.2) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.2) 100%);
 }
 
 /* Card Content */
@@ -608,7 +608,7 @@ body {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease 0.15s, transform 0.4s ease 0.15s,
-              background 0.3s ease, color 0.3s ease;
+    background 0.3s ease, color 0.3s ease;
 }
 
 .sg-card:hover .sg-card-btn {
@@ -1402,7 +1402,7 @@ body {
 }
 
 .footer-credit a:hover {
-    color: var(--gray);
+  color: var(--gray);
   opacity: 1;
 }
 
