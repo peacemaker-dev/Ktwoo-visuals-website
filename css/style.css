@@ -980,7 +980,7 @@ body {
   bottom: 0;
   right: 0;
   width: 52%;
-  height: 52%;
+  height: 60%;
   overflow: hidden;
   border: 4px solid var(--black);
 }
@@ -1001,8 +1001,8 @@ body {
 /* Gold Badge */
 .wu-badge {
   position: absolute;
-  bottom: 52%;
-  left: 68%;
+  bottom: 55%;
+  left: 50%;
   transform: translate(-50%, 50%);
   z-index: 2;
   background: var(--gold);
@@ -1145,6 +1145,181 @@ body {
   }
 }
 
+
+/* ── ABOUT PREVIEW ──────────────────────────── */
+.about-preview {
+  padding: 120px 40px;
+  background: #0a0a0a;
+}
+
+.ap-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left — Content */
+.ap-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ap-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.ap-heading {
+  font-size: clamp(26px, 3.5vw, 42px);
+  font-weight: 900;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.ap-body {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--cream);
+  opacity: 0.7;
+}
+
+/* Stats Row */
+.ap-stats {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(201, 168, 76, 0.12);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+  margin: 8px 0;
+}
+
+.ap-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ap-stat-number {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.ap-stat-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.5;
+}
+
+.ap-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(201, 168, 76, 0.2);
+  align-self: center;
+}
+
+/* CTA Button */
+.ap-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  width: fit-content;
+  transition: var(--transition);
+}
+
+.ap-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* Right — Image */
+.ap-image-wrap {
+  position: relative;
+  height: 600px;
+}
+
+.ap-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.7s ease;
+}
+
+.ap-image-wrap:hover .ap-image {
+  transform: scale(1.03);
+}
+
+.ap-image-border {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--gold);
+  opacity: 0.2;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.ap-image-wrap:hover .ap-image-border {
+  opacity: 0.5;
+}
+
+/* ── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 1024px) {
+  .ap-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .ap-image-wrap {
+    height: 420px;
+  }
+
+  .ap-image-border {
+    bottom: -12px;
+    right: -12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-preview {
+    padding: 80px 24px;
+  }
+
+  .ap-image-wrap {
+    height: 300px;
+  }
+
+  .ap-stats {
+    gap: 20px;
+  }
+
+  .ap-stat-number {
+    font-size: 22px;
+  }
+}
 /* ========================= BOOKING CTA ========================= */
 .booking-cta {
   position: relative;
