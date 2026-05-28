@@ -1322,12 +1322,18 @@ body {
 }
 /* ========================= BOOKING CTA ========================= */
 .booking-cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /*min-height: 380px;*/
+}
+
+/* Left Side */
+.bcta-left {
   position: relative;
-  height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  padding: 60px 40px;
   overflow: hidden;
 }
 
@@ -1340,14 +1346,14 @@ body {
   transition: transform 6s ease;
 }
 
-.booking-cta:hover .bcta-bg {
+.bcta-left:hover .bcta-bg {
   transform: scale(1);
 }
 
 .bcta-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.72);
+  background: rgba(0, 0, 0, 0.75);
   z-index: 1;
 }
 
@@ -1356,10 +1362,8 @@ body {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
-  padding: 0 24px;
-  max-width: 700px;
+  max-width: 440px;
 }
 
 .bcta-tag {
@@ -1371,51 +1375,203 @@ body {
 }
 
 .bcta-heading {
-  font-size: clamp(28px, 5vw, 38px);
+  font-size: clamp(26px, 3vw, 38px);
   font-weight: 900;
   color: var(--cream);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 1.2;
 }
 
 .bcta-sub {
   font-size: 14px;
+  line-height: 1.8;
   color: var(--cream);
   opacity: 0.7;
-  letter-spacing: 1px;
-  max-width: 500px;
 }
 
-.bcta-btn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 18px 56px;
-  background: var(--gold);
-  color: var(--black);
+.bcta-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.bcta-info-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--cream);
   text-decoration: none;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  opacity: 0.8;
   transition: var(--transition);
 }
 
-.bcta-btn:hover {
-  background: transparent;
+.bcta-info-link:hover {
   color: var(--gold);
-  outline: 1px solid var(--gold);
+  opacity: 1;
+}
+
+.bcta-info-link svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* Right Side */
+.bcta-right {
+  background: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+.bcta-form-wrap {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bcta-form-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--black);
+  opacity: 0.6;
+}
+
+.bcta-form-heading {
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 900;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.bcta-form-sub {
+  font-size: 13px;
+  color: var(--black);
+  opacity: 0.6;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+/* Form Fields */
+.bcta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bcta-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.bcta-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bcta-field label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--black);
+  opacity: 0.7;
+}
+
+.bcta-field input,
+.bcta-field select,
+.bcta-field textarea {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: var(--black);
+  font-family: var(--font);
+  font-size: 13px;
+  padding: 12px 16px;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  width: 100%;
+  resize: none;
+}
+
+.bcta-field input::placeholder,
+.bcta-field textarea::placeholder {
+  color: var(--black);
+}
+
+.bcta-field select option {
+  background: var(--black);
+  color: var(--cream);
+}
+
+.bcta-field input:focus,
+.bcta-field select:focus,
+.bcta-field textarea:focus {
+  border-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.bcta-submit {
+  margin-top: 4px;
+  padding: 15px;
+  background: var(--black);
+  color: var(--gold);
+  border: none;
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.bcta-submit:hover {
+  background: rgba(0, 0, 0, 0.85);
 }
 
 /* ── RESPONSIVE ─────────────────────────────── */
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .booking-cta {
-    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .bcta-left {
+    min-height: 300px;
+    padding: 60px 40px;
+  }
+
+  .bcta-right {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bcta-left {
     padding: 60px 24px;
   }
 
-  .bcta-btn {
-    padding: 16px 40px;
+  .bcta-right {
+    padding: 60px 24px;
+  }
+
+  .bcta-form-row {
+    grid-template-columns: 1fr;
   }
 }
 
