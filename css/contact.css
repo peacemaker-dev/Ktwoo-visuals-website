@@ -1,0 +1,559 @@
+/* ================================================
+   CONTACT PAGE — contact.css
+   Linked after style.css
+   Only contact page body styles live here
+================================================ */
+
+/* ─── 1. HERO ───────────────────────────────── */
+.ct-hero {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.ct-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.ct-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.68);
+  z-index: 1;
+}
+
+.ct-hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 0 24px;
+  max-width: 700px;
+}
+
+.ct-hero-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.ct-hero-heading {
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 900;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.15;
+}
+
+.ct-hero-sub {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.5;
+}
+
+/* ─── RESPONSIVE ────────────────────────────── */
+@media (max-width: 768px) {
+  .ct-hero {
+    height: 45vh;
+  }
+}
+
+/* ─── 2. CONTACT INTRO STRIP ────────────────── */
+.ct-strip {
+  background: #0a0a0a;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.ct-strip-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  align-items: center;
+}
+
+.ct-strip-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 48px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.ct-strip-card:hover {
+  background: rgba(201, 168, 76, 0.04);
+}
+
+.ct-strip-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.ct-strip-card:hover .ct-strip-icon {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+}
+
+.ct-strip-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ct-strip-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+}
+
+.ct-strip-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cream);
+  letter-spacing: 0.5px;
+}
+
+.ct-strip-divider {
+  background: rgba(201, 168, 76, 0.1);
+  align-self: stretch;
+}
+
+/* ─── RESPONSIVE ────────────────────────────── */
+@media (max-width: 1024px) {
+  .ct-strip-card {
+    padding: 32px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ct-strip-container {
+    grid-template-columns: 1fr;
+  }
+
+  .ct-strip-divider {
+    width: 100%;
+    height: 1px;
+    align-self: auto;
+  }
+
+  .ct-strip-card {
+    padding: 28px 24px;
+  }
+}
+
+/* ─── 3. MAIN CONTENT ───────────────────────── */
+.ct-main {
+  padding: 100px 40px;
+  background: var(--black);
+}
+
+.ct-main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Left — Form */
+.ct-form-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ct-form-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.ct-form-heading {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 900;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.ct-form-sub {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--cream);
+  opacity: 0.55;
+  margin-bottom: 8px;
+}
+
+/* Form */
+.ct-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ct-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.ct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ct-field label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.5;
+}
+
+.ct-field input,
+.ct-field select,
+.ct-field textarea {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--cream);
+  font-family: var(--font);
+  font-size: 13px;
+  padding: 13px 16px;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  width: 100%;
+  resize: none;
+}
+
+.ct-field input::placeholder,
+.ct-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.ct-field select option {
+  background: #111;
+  color: var(--cream);
+}
+
+.ct-field input:focus,
+.ct-field select:focus,
+.ct-field textarea:focus {
+  border-color: rgba(201, 168, 76, 0.5);
+  background: rgba(201, 168, 76, 0.04);
+}
+
+/* Checkbox */
+.ct-checkbox-wrap {
+  margin-top: 4px;
+}
+
+.ct-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.ct-checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.ct-checkbox-custom {
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  background: transparent;
+  flex-shrink: 0;
+  position: relative;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.ct-checkbox-label input[type="checkbox"]:checked + .ct-checkbox-custom {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.ct-checkbox-label input[type="checkbox"]:checked + .ct-checkbox-custom::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 5px;
+  height: 9px;
+  border: 2px solid var(--black);
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.ct-checkbox-text {
+  font-size: 12px;
+  color: var(--cream);
+  opacity: 0.6;
+  line-height: 1.5;
+}
+
+.ct-tc-link {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.3s ease;
+}
+
+.ct-tc-link:hover {
+  opacity: 0.7;
+}
+
+/* Submit */
+.ct-submit {
+  margin-top: 4px;
+  padding: 16px;
+  background: var(--gold);
+  color: var(--black);
+  border: none;
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.ct-submit:hover:not(:disabled) {
+  background: transparent;
+  color: var(--gold);
+  outline: 1px solid var(--gold);
+}
+
+.ct-submit:disabled {
+  background: rgba(201, 168, 76, 0.2);
+  color: rgba(201, 168, 76, 0.4);
+  cursor: not-allowed;
+}
+
+/* Messages */
+.ct-success,
+.ct-error {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.ct-success {
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: var(--gold);
+}
+
+.ct-error {
+  background: rgba(255, 80, 80, 0.06);
+  border: 1px solid rgba(255, 80, 80, 0.3);
+  color: #ff6b6b;
+}
+
+.ct-success.show,
+.ct-error.show {
+  display: flex;
+}
+
+/* Right — Info */
+.ct-info-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: sticky;
+  top: 100px;
+}
+
+.ct-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ct-info-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.ct-info-heading {
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 900;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.ct-info-body {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--cream);
+  opacity: 0.55;
+}
+
+/* Info Items */
+.ct-info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ct-info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.ct-info-item:hover {
+  border-color: rgba(201, 168, 76, 0.15);
+  background: rgba(201, 168, 76, 0.03);
+}
+
+.ct-info-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(201, 168, 76, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.ct-info-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ct-info-item-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+.ct-info-item-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--cream);
+}
+
+/* Socials */
+.ct-info-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.ct-info-socials-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.35;
+}
+
+.ct-socials-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.ct-socials-icons a {
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.ct-socials-icons a:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ─── RESPONSIVE ────────────────────────────── */
+@media (max-width: 1024px) {
+  .ct-main-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .ct-info-wrap {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .ct-main {
+    padding: 80px 24px;
+  }
+
+  .ct-form-row {
+    grid-template-columns: 1fr;
+  }
+}

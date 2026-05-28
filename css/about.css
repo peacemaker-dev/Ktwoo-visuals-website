@@ -729,3 +729,299 @@
     background: rgba(0, 0, 0, 0.15);
   }
 }
+
+/* ─── 8. CLIENT EXPERIENCE ──────────────────── */
+.ab-experience {
+  padding: 120px 40px;
+  background: #0a0a0a;
+}
+
+.ab-exp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.ab-exp-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.ab-exp-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.ab-exp-heading {
+  font-size: clamp(26px, 3.5vw, 42px);
+  font-weight: 900;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ab-exp-sub {
+  font-size: 13px;
+  color: var(--cream);
+  opacity: 0.5;
+  letter-spacing: 1px;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+/* Steps */
+.ab-exp-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+}
+
+/* Connecting line behind icons */
+.ab-exp-line {
+  position: absolute;
+  top: 23px;
+  left: calc(10% + 24px);
+  right: calc(10% + 24px);
+  height: 1px;
+  background: rgba(201, 168, 76, 0.2);
+  z-index: 0;
+}
+
+.ab-exp-step {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.ab-exp-step-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.ab-exp-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--black);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.ab-exp-step:hover .ab-exp-icon {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+}
+
+.ab-exp-number {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--gold);
+  opacity: 0.4;
+}
+
+.ab-exp-step-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.ab-exp-step-text {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--cream);
+  opacity: 0.55;
+  text-align: center;
+}
+
+/* ─── RESPONSIVE ────────────────────────────── */
+@media (max-width: 1024px) {
+  .ab-exp-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 2px;
+  }
+
+  .ab-exp-line {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .ab-experience {
+    padding: 80px 24px;
+  }
+
+  .ab-exp-steps {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .ab-exp-step {
+    padding: 0;
+  }
+
+  .ab-exp-step-top {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ab-exp-step-title,
+  .ab-exp-step-text {
+    text-align: left;
+  }
+}
+
+/* ─── 9. FINAL CTA ──────────────────────────── */
+.ab-cta {
+  position: relative;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.ab-cta-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.06);
+  transition: transform 8s ease;
+}
+
+.ab-cta:hover .ab-cta-bg {
+  transform: scale(1);
+}
+
+.ab-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  z-index: 1;
+}
+
+.ab-cta-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 680px;
+  padding: 0 24px;
+}
+
+.ab-cta-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.ab-cta-heading {
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 900;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.15;
+}
+
+.ab-cta-sub {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--cream);
+  opacity: 0.65;
+  max-width: 500px;
+}
+
+.ab-cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ab-cta-btn-primary {
+  display: inline-block;
+  padding: 16px 48px;
+  background: var(--gold);
+  color: var(--black);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.ab-cta-btn-primary:hover {
+  background: transparent;
+  color: var(--gold);
+  outline: 1px solid var(--gold);
+}
+
+.ab-cta-btn-secondary {
+  display: inline-block;
+  padding: 16px 48px;
+  border: 1px solid var(--cream);
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.ab-cta-btn-secondary:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  opacity: 1;
+}
+
+/* ─── RESPONSIVE ────────────────────────────── */
+@media (max-width: 768px) {
+  .ab-cta {
+    padding: 60px 24px;
+  }
+
+  .ab-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ab-cta-btn-primary,
+  .ab-cta-btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
