@@ -3,8 +3,6 @@
    Linked after style.css
    Only contact page body styles live here
 ================================================ */
-
-/* ─── 1. HERO ───────────────────────────────── */
 .ct-hero {
   position: relative;
   width: 100%;
@@ -50,7 +48,7 @@
 }
 
 .ct-hero-heading {
-  font-size: clamp(28px, 5vw, 52px);
+  font-size: clamp(28px, 5vw, 46px);
   font-weight: 900;
   color: var(--cream);
   text-transform: uppercase;
@@ -64,10 +62,10 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--cream);
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
-/* ─── RESPONSIVE ────────────────────────────── */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .ct-hero {
     height: 45vh;
@@ -241,8 +239,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--cream);
-  opacity: 0.5;
+  color: var(--white);
 }
 
 .ct-field input,
@@ -324,7 +321,6 @@
 .ct-checkbox-text {
   font-size: 12px;
   color: var(--cream);
-  opacity: 0.6;
   line-height: 1.5;
 }
 
@@ -511,7 +507,6 @@
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--cream);
-  opacity: 0.35;
 }
 
 .ct-socials-icons {
