@@ -40,14 +40,14 @@ const galleries = {
   ],
 
   "photography": [
-    { type: "image", src: "assets/photography/gallery-1.webp", alt: "Professional portrait photography" },
-    { type: "image", src: "assets/photography/gallery-2.webp", alt: "Outdoor photography session" },
-    { type: "image", src: "assets/photography/gallery-3.webp", alt: "Studio photography with lighting" },
-    { type: "image", src: "assets/photography/gallery-4.webp", alt: "Photography with smoke bomb effects" },
-    { type: "image", src: "assets/photography/gallery-5.webp", alt: "Professional photography portrait" },
-    { type: "image", src: "assets/photography/gallery-6.webp", alt: "Photography creative direction" },
-    { type: "image", src: "assets/photography/gallery-7.webp", alt: "Photography champagne props" },
-    { type: "image", src: "assets/photography/gallery-8.webp", alt: "Photography cinematic edit" },
+    { type: "image", src: "assets/photography/photo (11).jpg", alt: "Professional portrait photography" },
+    { type: "image", src: "assets/photography/photo (5).jpg", alt: "Outdoor photography session" },
+    { type: "image", src: "assets/photography/photo (3).jpg", alt: "Studio photography with lighting" },
+    { type: "image", src: "assets/photography/photo (4).jpg", alt: "Photography with smoke bomb effects" },
+    { type: "image", src: "assets/photography/photo (6).jpg", alt: "Professional photography portrait" },
+    { type: "image", src: "assets/photography/photo (2).jpg", alt: "Photography creative direction" },
+    { type: "image", src: "assets/photography/photo (14).jpg", alt: "Photography champagne props" },
+    { type: "image", src: "assets/photography/photo (9).jpg", alt: "Photography cinematic edit" },
   ],
 
   "videography": [
@@ -62,14 +62,14 @@ const galleries = {
   ],
 
   "graduation": [
-    { type: "image", src: "assets/graduation/gallery-1.webp", alt: "Graduation portrait photography" },
-    { type: "image", src: "assets/graduation/gallery-2.webp", alt: "Graduation gown full length shot" },
-    { type: "image", src: "assets/graduation/gallery-3.webp", alt: "Graduation outdoor shoot" },
-    { type: "image", src: "assets/graduation/gallery-4.webp", alt: "Graduation drone aerial shot" },
-    { type: "image", src: "assets/graduation/gallery-5.webp", alt: "Graduation cinematic portrait" },
-    { type: "image", src: "assets/graduation/gallery-6.webp", alt: "Graduation smoke bomb effects" },
-    { type: "image", src: "assets/graduation/gallery-7.webp", alt: "Graduation champagne props" },
-    { type: "image", src: "assets/graduation/gallery-8.webp", alt: "Graduation highlight video frame" },
+    { type: "image", src: "assets/graduation/graduation (2).png", alt: "Graduation portrait photography" },
+    { type: "image", src: "assets/graduation/graduation (1).jpg", alt: "Graduation gown full length shot" },
+    { type: "image", src: "assets/graduation/graduation (15).jpg", alt: "Graduation outdoor shoot" },
+    { type: "image", src: "assets/graduation/graduation (5).png", alt: "Graduation drone aerial shot" },
+    { type: "image", src: "assets/graduation/graduation (6).png", alt: "Graduation cinematic portrait" },
+    { type: "image", src: "assets/graduation/graduation (7).png", alt: "Graduation smoke bomb effects" },
+    { type: "image", src: "assets/graduation/graduation (10).png", alt: "Graduation champagne props" },
+    { type: "image", src: "assets/graduation/graduation (9).png", alt: "Graduation highlight video frame" },
   ],
 
   "photoshoot": [

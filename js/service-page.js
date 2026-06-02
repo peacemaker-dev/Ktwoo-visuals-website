@@ -1,8 +1,8 @@
 /* ---- Package background images per tier ---- */
 var spBgImages = {
-  premium:  "assets/matric-dance/mtd-3.png",
-  standard: "assets/matric-dance/mtd-4.png",
-  basic:    "assets/matric-dance/mtd-1.png"
+  premium:  "assets/hero/premium-bg.jpg",
+  standard: "assets/hero/standard-bg.jpg",
+  basic:    "assets/hero/basic-bg.jpg"
 };
 
 function spSwitchTab(tier) {
@@ -39,3 +39,20 @@ document.querySelectorAll('.sp-tab-btn').forEach(function (btn, i, all) {
     if (e.key === 'ArrowLeft')  { spSwitchTab(tiers[(i + 2) % 3]); all[(i + 2) % 3].focus(); }
   });
 });
+
+function spToggleFaq(btn) {
+  var item = btn.closest('.sp-faq-item');
+  var isActive = item.classList.contains('active');
+
+  /* Close all open items */
+  document.querySelectorAll('.sp-faq-item.active').forEach(function (openItem) {
+    openItem.classList.remove('active');
+    openItem.querySelector('.sp-faq-question').setAttribute('aria-expanded', 'false');
+  });
+
+  /* Open clicked item if it wasn't already open */
+  if (!isActive) {
+    item.classList.add('active');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}

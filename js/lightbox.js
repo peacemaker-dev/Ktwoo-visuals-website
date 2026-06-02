@@ -192,8 +192,6 @@ const Lightbox = (() => {
       if (!isNaN(index)) open(index);
     });
   }
-
-
   // ── INIT ───────────────────────────────────
 
   function init() {

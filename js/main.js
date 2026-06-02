@@ -23,5 +23,29 @@ navLinks.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
+// ── FAQ ACCORDION (global) ────────────────────
+document.addEventListener('DOMContentLoaded', function () {
+  const faqItems = document.querySelectorAll('.ct-faq-item');
+
+  faqItems.forEach(function (item) {
+    const question = item.querySelector('.ct-faq-question');
+    const answer   = item.querySelector('.ct-faq-answer');
+
+    question.addEventListener('click', function () {
+      const isOpen = question.getAttribute('aria-expanded') === 'true';
+
+      faqItems.forEach(function (other) {
+        other.querySelector('.ct-faq-question').setAttribute('aria-expanded', 'false');
+        other.querySelector('.ct-faq-answer').classList.remove('open');
+      });
+
+      if (!isOpen) {
+        question.setAttribute('aria-expanded', 'true');
+        answer.classList.add('open');
+      }
+    });
+  });
+});
+
 //Set current year in footer
 document.getElementById('currentYear').textContent = new Date().getFullYear();

@@ -22,7 +22,6 @@ function nextSlide() {
 setInterval(nextSlide, 5000);
 
 // ── STATS COUNTER ────────────────────────────
-
 function animateCounter(el) {
   const target = parseInt(el.getAttribute('data-target'));
   const duration = 2000;

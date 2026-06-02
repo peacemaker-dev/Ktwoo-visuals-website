@@ -118,31 +118,6 @@ ctForm.addEventListener('submit', (e) => {
   });
 });
 
-// ── FAQ ACCORDION ────────────────────────────
-
-const faqItems = document.querySelectorAll('.ct-faq-item');
-
-faqItems.forEach(item => {
-  const question = item.querySelector('.ct-faq-question');
-  const answer   = item.querySelector('.ct-faq-answer');
-
-  question.addEventListener('click', () => {
-    const isOpen = question.getAttribute('aria-expanded') === 'true';
-
-    // Close all other items
-    faqItems.forEach(other => {
-      other.querySelector('.ct-faq-question').setAttribute('aria-expanded', 'false');
-      other.querySelector('.ct-faq-answer').classList.remove('open');
-    });
-
-    // Toggle clicked item
-    if (!isOpen) {
-      question.setAttribute('aria-expanded', 'true');
-      answer.classList.add('open');
-    }
-  });
-});
-
 // ── TERMS & CONDITIONS MODAL ─────────────────
 
 const tcModalOverlay = document.getElementById('tcModalOverlay');

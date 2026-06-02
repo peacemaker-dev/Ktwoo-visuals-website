@@ -1,5 +1,4 @@
 // ── ABOUT PAGE STATS COUNTER ─────────────────
-
 function animateAboutCounter(el) {
   const target = parseInt(el.getAttribute('data-target'));
   const duration = 2000;
