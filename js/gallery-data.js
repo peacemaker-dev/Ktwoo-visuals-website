@@ -51,14 +51,14 @@ const galleries = {
   ],
 
   "videography": [
-    { type: "image", src: "assets/videography/gallery-1.webp", alt: "Cinematic videography behind the scenes" },
-    { type: "image", src: "assets/videography/gallery-2.webp", alt: "Videography drone aerial footage" },
-    { type: "image", src: "assets/videography/gallery-3.webp", alt: "Videography lighting setup" },
-    { type: "image", src: "assets/videography/gallery-4.webp", alt: "Videography camera setup" },
-    { type: "image", src: "assets/videography/gallery-5.webp", alt: "Cinematic videography edit" },
-    { type: "image", src: "assets/videography/gallery-6.webp", alt: "Videography production team" },
-    { type: "image", src: "assets/videography/gallery-7.webp", alt: "Videography outdoor shoot" },
-    { type: "image", src: "assets/videography/gallery-8.webp", alt: "Videography highlight reel frame" },
+    { type: "image", src: "assets/music-videos/music-video (13).jpg", alt: "Cinematic videography behind the scenes" },
+    { type: "image", src: "assets/music-videos/music-video (2).jpg", alt: "Videography drone aerial footage" },
+    { type: "image", src: "assets/music-videos/music-video (3).jpg", alt: "Videography lighting setup" },
+    { type: "image", src: "assets/music-videos/music-video (13).jpg", alt: "Videography camera setup" },
+    { type: "image", src: "assets/music-videos/music-video (8).jpg", alt: "Cinematic videography edit" },
+    { type: "image", src: "assets/music-videos/music-video (7).jpg", alt: "Videography production team" },
+    { type: "image", src: "assets/music-videos/music-video (9).jpg", alt: "Videography outdoor shoot" },
+    { type: "image", src: "assets/music-videos/music-video (10).jpg", alt: "Videography highlight reel frame" },
   ],
 
   "graduation": [
