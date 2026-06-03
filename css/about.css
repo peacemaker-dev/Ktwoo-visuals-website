@@ -68,118 +68,100 @@
   }
 }
 
-/* ======================= BRAND IDENTITY ======================= */
-.ab-brand {
-  padding: 60px 40px;
+/* ============================ 3. OPENING STATEMENT ============================ */
+.ab-opening {
+  padding: 40px 40px 50px 40px;
   background: var(--black);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
 }
 
-.ab-brand-container {
-  max-width: 1200px;
+.ab-opening-container {
+  max-width: 1100px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-/* Left */
-.ab-brand-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 60px;
 }
 
-.ab-brand-tag {
+/* Top — Tag + Statement */
+.ab-opening-top {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ab-opening-tag {
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--gold);
 }
 
-.ab-brand-heading {
-  font-size: clamp(26px, 3.5vw, 35px);
+.ab-opening-statement {
+  font-size: clamp(32px, 5vw, 36px);
   font-weight: 900;
   color: var(--cream);
+  line-height: 1.15;
   text-transform: uppercase;
   letter-spacing: 1px;
-  line-height: 1.2;
+  max-width: 900px;
 }
 
-.ab-brand-body {
-  font-size: 14px;
+/* Highlight key word in gold */
+.ab-opening-statement em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+/* Bottom — Gold line + Body */
+.ab-opening-bottom {
+  display: grid;
+  grid-template-columns: 4px 1fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 700px;
+  margin-left: auto;
+}
+
+.ab-opening-line {
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--gold),
+    rgba(201, 168, 76, 0.1)
+  );
+  min-height: 80px;
+}
+
+.ab-opening-body {
+  font-size: 16px;
   line-height: 1.9;
   color: var(--cream);
   opacity: 0.7;
+  font-weight: 400;
 }
 
-/* Right — Cards */
-.ab-brand-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.ab-brand-card {
-  padding: 28px 24px;
-  border: 1px solid rgba(201, 168, 76, 0.12);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  transition: border-color 0.3s ease;
-}
-
-.ab-brand-card:hover {
-  border-color: rgba(201, 168, 76, 0.4);
-}
-
-.ab-brand-card-icon {
-  width: 44px;
-  height: 44px;
-  background: rgba(201, 168, 76, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-}
-
-.ab-brand-card-title {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--cream);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.ab-brand-card-text {
-  font-size: 12px;
-  line-height: 1.7;
-  color: var(--cream);
-  opacity: 0.55;
-}
-
-/*  RESPONSIVE  */
-@media (max-width: 1024px) {
-  .ab-brand-container {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-}
-
-@media (max-width: 600px) {
-  .ab-brand {
-    padding: 80px 24px;
+/* ─── RESPONSIVE ────────────────────────────── */
+@media (max-width: 768px) {
+  .ab-opening {
+    padding: 20px 24px 30px 24px;
   }
 
-  .ab-brand-cards {
-    grid-template-columns: 1fr;
+  .ab-opening-statement {
+    font-size: clamp(26px, 7vw, 36px);
+  }
+
+  .ab-opening-bottom {
+    margin-left: 0;
+    gap: 24px;
   }
 }
 
 /* ============================ FOUNDER STORY ============================ */
 .ab-founder {
-  padding: 60px 40px;
+  padding: 50px 40px;
   background: #0a0a0a;
 }
 
@@ -351,6 +333,383 @@
   }
 }
 
+/* ─── 5. JOURNEY TIMELINE ───────────────────── */
+.ab-timeline {
+  padding: 50px 40px;
+  background: #0a0a0a;
+}
+
+.ab-tl-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Header */
+.ab-tl-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.ab-tl-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.ab-tl-heading {
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 900;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ab-tl-sub {
+  font-size: 13px;
+  color: var(--cream);
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+
+/* Track */
+.ab-tl-track {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Vertical connecting line */
+.ab-tl-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(201, 168, 76, 0.4) 10%,
+    rgba(201, 168, 76, 0.4) 90%,
+    transparent
+  );
+  z-index: 0;
+}
+
+/* Milestone */
+.ab-tl-milestone {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding-bottom: 40px;
+}
+
+.ab-tl-milestone:last-child {
+  padding-bottom: 0;
+}
+
+/* Dot */
+.ab-tl-dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(201, 168, 76, 0.3);
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  border-radius: 50%;
+  margin-top: 6px;
+  position: relative;
+  z-index: 1;
+  justify-self: center;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+}
+
+.ab-tl-dot--gold {
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 12px rgba(201, 168, 76, 0.4);
+}
+
+.ab-tl-dot--large {
+  width: 18px;
+  height: 18px;
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.5);
+  margin-top: 4px;
+}
+
+/* Card */
+.ab-tl-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px 32px;
+  background: var(--black);
+  border-left: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.ab-tl-card:hover {
+  border-left-color: rgba(201, 168, 76, 0.3);
+}
+
+/* Highlighted milestone cards */
+.ab-tl-card--highlight {
+  border-left-color: rgba(201, 168, 76, 0.4);
+  background: rgba(201, 168, 76, 0.03);
+}
+
+.ab-tl-card--highlight:hover {
+  border-left-color: var(--gold);
+}
+
+/* Today card */
+.ab-tl-card--today {
+  border-left-color: var(--gold);
+  background: rgba(201, 168, 76, 0.05);
+}
+
+.ab-tl-card--today:hover {
+  border-left-color: var(--gold);
+}
+
+.ab-tl-card--today .ab-tl-year {
+  color: var(--gold);
+  opacity: 1;
+}
+
+/* Year */
+.ab-tl-year {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+/* Title */
+.ab-tl-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Text */
+.ab-tl-text {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--cream);
+  opacity: 0.6;
+}
+
+.ab-tl-text strong {
+  color: var(--cream);
+  opacity: 1;
+  font-weight: 700;
+}
+
+/* ─── RESPONSIVE ────────────────────────────── */
+@media (max-width: 768px) {
+  .ab-timeline {
+    padding: 60px 24px;
+  }
+
+  .ab-tl-milestone {
+    grid-template-columns: 32px 1fr;
+    gap: 20px;
+  }
+
+  .ab-tl-card {
+    padding: 20px 20px;
+  }
+
+  .ab-tl-line {
+    left: 15px;
+  }
+}
+
+/* ─── 6. BRAND TODAY ────────────────────────── */
+.ab-today {
+  padding: 50px 40px;
+  background: var(--black);
+}
+
+.ab-today-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Left */
+.ab-today-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ab-today-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.ab-today-heading {
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 900;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.ab-today-body {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--cream);
+  opacity: 0.7;
+}
+
+.ab-today-body strong {
+  color: var(--cream);
+  opacity: 1;
+  font-weight: 700;
+}
+
+/* Stats Row */
+.ab-today-stats {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(201, 168, 76, 0.12);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+  margin-top: 8px;
+}
+
+.ab-today-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ab-today-stat-number {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.ab-today-stat-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.4;
+}
+
+.ab-today-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(201, 168, 76, 0.2);
+  align-self: center;
+}
+
+/* Right — Cards */
+.ab-today-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  position: sticky;
+  top: 100px;
+}
+
+.ab-today-card {
+  padding: 28px 24px;
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.3s ease;
+}
+
+.ab-today-card:hover {
+  border-color: rgba(201, 168, 76, 0.4);
+}
+
+.ab-today-card-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(201, 168, 76, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+}
+
+.ab-today-card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ab-today-card-text {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--cream);
+  opacity: 0.55;
+}
+
+/* ─── RESPONSIVE ────────────────────────────── */
+@media (max-width: 1024px) {
+  .ab-today-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .ab-today-cards {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .ab-today {
+    padding: 80px 24px;
+  }
+
+  .ab-today-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ab-today-stats {
+    gap: 20px;
+  }
+
+  .ab-today-stat-number {
+    font-size: 22px;
+  }
+}
+
 /* ================== MISSION & VISION ================== */
 .ab-mission {
   background: var(--black);
@@ -486,8 +845,8 @@
 @media (max-width: 768px) {
   .ab-mv-container {
     grid-template-columns: 1fr;
-    padding: 80px 24px 40px;
-    gap: 40px;
+    padding: 40px 24px 40px;
+    gap: 30px;
   }
 
   .ab-mv-divider {
@@ -619,7 +978,7 @@
 
 /* ─── 7. STATS ──────────────────────────────── */
 .ab-stats {
-  padding: 80px 40px;
+  padding: 60px 40px;
   background: var(--gold);
 }
 
@@ -732,7 +1091,7 @@
 
 /* ─── 8. CLIENT EXPERIENCE ──────────────────── */
 .ab-experience {
-  padding: 120px 40px;
+  padding: 50px 40px;
   background: #0a0a0a;
 }
 
@@ -761,7 +1120,7 @@
 }
 
 .ab-exp-heading {
-  font-size: clamp(26px, 3.5vw, 42px);
+  font-size: clamp(26px, 3.5vw, 36px);
   font-weight: 900;
   color: var(--cream);
   text-transform: uppercase;
@@ -870,7 +1229,7 @@
 
 @media (max-width: 600px) {
   .ab-experience {
-    padding: 80px 24px;
+    padding: 40px 24px;
   }
 
   .ab-exp-steps {

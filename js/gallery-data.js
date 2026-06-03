@@ -73,14 +73,14 @@ const galleries = {
   ],
 
   "photoshoot": [
-    { type: "image", src: "assets/photoshoot/gallery-1.webp", alt: "Creative photoshoot portrait" },
-    { type: "image", src: "assets/photoshoot/gallery-2.webp", alt: "Photoshoot outdoor session" },
-    { type: "image", src: "assets/photoshoot/gallery-3.webp", alt: "Photoshoot studio lighting" },
-    { type: "image", src: "assets/photoshoot/gallery-4.webp", alt: "Photoshoot smoke bomb effects" },
-    { type: "image", src: "assets/photoshoot/gallery-5.webp", alt: "Photoshoot creative direction" },
-    { type: "image", src: "assets/photoshoot/gallery-6.webp", alt: "Photoshoot cinematic edit" },
-    { type: "image", src: "assets/photoshoot/gallery-7.webp", alt: "Photoshoot champagne props" },
-    { type: "image", src: "assets/photoshoot/gallery-8.webp", alt: "Photoshoot drone aerial shot" },
+    { type: "image", src: "assets/photoshoot/photoshoot (14).png", alt: "Creative photoshoot portrait" },
+    { type: "image", src: "assets/photoshoot/photoshoot (23).jpg", alt: "Photoshoot outdoor session" },
+    { type: "image", src: "assets/photoshoot/photoshoot (31).png", alt: "Photoshoot studio lighting" },
+    { type: "image", src: "assets/photoshoot/photoshoot (29).jpg", alt: "Photoshoot smoke bomb effects" },
+    { type: "image", src: "assets/photoshoot/photoshoot (10).png", alt: "Photoshoot creative direction" },
+    { type: "image", src: "assets/photoshoot/photoshoot (25).jpg", alt: "Photoshoot cinematic edit" },
+    { type: "image", src: "assets/photoshoot/photoshoot (7).png", alt: "Photoshoot champagne props" },
+    { type: "image", src: "assets/photoshoot/photoshoot (8).png", alt: "Photoshoot drone aerial shot" },
   ],
 
   "kids-shoot": [
