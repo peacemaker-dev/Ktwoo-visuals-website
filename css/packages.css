@@ -1,0 +1,609 @@
+/* ================================================================
+   PACKAGES SECTION — packages.css
+   Premium glass card design for all service package sections.
+   Add to service-page.css or import separately.
+================================================================ */
+
+/* ── SECTION WRAPPER ──────────────────────────────────────────── */
+#sp-packages {
+  position: relative;
+  padding: 120px 40px;
+  overflow: hidden;
+}
+
+/* Cinematic background */
+.sp-pkg-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.06);
+  animation: pkgBgBreathe 12s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes pkgBgBreathe {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1.0); }
+}
+
+/* Dark cinematic overlay */
+.sp-pkg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.78) 50%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+  z-index: 1;
+}
+
+/* Container sits above bg */
+.sp-pkg-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ── HEADER ───────────────────────────────────────────────────── */
+.sp-pkg-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.sp-section-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.sp-section-heading {
+  font-size: clamp(26px, 3.5vw, 42px);
+  font-weight: 900;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sp-section-sub {
+  font-size: 13px;
+  color: var(--cream);
+  opacity: 0.55;
+  max-width: 560px;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+}
+
+/* ── STEP BLOCKS ──────────────────────────────────────────────── */
+.sp-step-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sp-step-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.4;
+}
+
+.sp-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 10px;
+  font-weight: 900;
+  border-radius: 50%;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+/* ── COVERAGE TABS ────────────────────────────────────────────── */
+.sp-coverage-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sp-coverage-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--cream);
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.sp-coverage-btn:hover {
+  border-color: rgba(201, 168, 76, 0.5);
+  opacity: 0.9;
+  background: rgba(201, 168, 76, 0.06);
+}
+
+.sp-coverage-btn.active {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: var(--gold);
+  color: var(--gold);
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.12);
+}
+
+/* ── TIER TABS ────────────────────────────────────────────────── */
+.sp-tier-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sp-tier-btn {
+  padding: 12px 36px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  color: var(--cream);
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+  opacity: 0.4;
+}
+
+.sp-tier-btn:hover {
+  opacity: 0.75;
+  color: var(--cream);
+}
+
+.sp-tier-btn.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+  opacity: 1;
+}
+
+/* ── GLASS CARD ───────────────────────────────────────────────── */
+.sp-glass-card {
+  background: rgba(10, 10, 10, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 2px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.3s ease;
+}
+
+/* Premium card — gold top border + glow */
+.sp-glass-card--premium {
+  border-top: 2px solid var(--gold);
+  box-shadow:
+    0 0 40px rgba(201, 168, 76, 0.08),
+    inset 0 1px 0 rgba(201, 168, 76, 0.15);
+}
+
+.sp-glass-card-inner {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Card Header */
+.sp-glass-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sp-glass-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sp-tier-badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.45;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: fit-content;
+}
+
+.sp-tier-badge--gold {
+  color: var(--gold);
+  border-color: rgba(201, 168, 76, 0.3);
+  opacity: 1;
+}
+
+.sp-glass-title {
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 900;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.15;
+}
+
+.sp-card-coverage {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gold);
+  opacity: 0.7;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+/* Price Block */
+.sp-glass-price-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.sp-glass-price-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.4;
+}
+
+.sp-glass-price {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* Card Body — three columns */
+.sp-glass-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.sp-glass-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sp-glass-col-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+}
+
+/* Lists */
+.sp-glass-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.sp-glass-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--cream);
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
+.sp-glass-list--team li {
+  padding-left: 12px;
+  position: relative;
+}
+
+.sp-glass-list--team li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.sp-list-check {
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+  opacity: 0.8;
+}
+
+/* Card Footer */
+.sp-glass-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  flex-wrap: wrap;
+}
+
+.sp-glass-note {
+  font-size: 11px;
+  color: var(--cream);
+  opacity: 0.3;
+  font-style: italic;
+  letter-spacing: 0.3px;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.sp-glass-book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 40px;
+  background: var(--gold);
+  color: var(--black);
+  text-decoration: none;
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.sp-glass-book-btn:hover {
+  background: transparent;
+  color: var(--gold);
+  outline: 1px solid var(--gold);
+}
+
+/* ── RATES TABLE ──────────────────────────────────────────────── */
+.sp-rates-wrap {
+  background: rgba(10, 10, 10, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.sp-rates-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sp-rates-table thead tr {
+  background: rgba(201, 168, 76, 0.08);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.sp-rates-table th {
+  padding: 16px 24px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: left;
+}
+
+.sp-rates-row td,
+.sp-rates-row--alt td {
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.sp-rates-row--alt {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.sp-rates-service {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cream);
+}
+
+.sp-rates-coverage {
+  font-size: 12px;
+  color: var(--cream);
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+
+.sp-rates-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.sp-rates-action {
+  text-align: right;
+}
+
+.sp-rates-book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: var(--gold);
+  text-decoration: none;
+  font-family: var(--font);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.sp-rates-book-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+}
+
+/* ── DISCLAIMER ───────────────────────────────────────────────── */
+.sp-disclaimer {
+  padding: 20px 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 3px solid rgba(201, 168, 76, 0.4);
+}
+
+.sp-disclaimer p {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--cream);
+  opacity: 0.5;
+}
+
+.sp-disclaimer strong {
+  color: var(--gold);
+  opacity: 0.8;
+  font-weight: 700;
+}
+
+/* Error state */
+.sp-pkg-error {
+  text-align: center;
+  font-size: 13px;
+  color: var(--cream);
+  opacity: 0.35;
+  padding: 60px 0;
+  font-style: italic;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .sp-glass-body {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  #sp-packages {
+    padding: 80px 24px;
+  }
+
+  .sp-glass-card-inner {
+    padding: 28px 24px;
+  }
+
+  .sp-glass-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .sp-glass-price-block {
+    align-items: flex-start;
+  }
+
+  .sp-glass-body {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sp-coverage-btn {
+    padding: 12px 20px;
+    font-size: 12px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .sp-tier-btn {
+    padding: 12px 16px;
+    flex: 1;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 10px;
+  }
+
+  .sp-glass-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sp-glass-book-btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .sp-rates-table th,
+  .sp-rates-row td,
+  .sp-rates-row--alt td {
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sp-coverage-tabs {
+    flex-direction: column;
+  }
+
+  .sp-coverage-btn {
+    width: 100%;
+  }
+
+  .sp-glass-price {
+    font-size: 32px;
+  }
+}

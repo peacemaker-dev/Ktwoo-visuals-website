@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- Service Page Shared Styles -->
     <link rel="stylesheet" href="css/service-page.css" />
+    <!-- Packages Section Styles -->
+    <link rel="stylesheet" href="css/packages.css" />
   </head>
 
   <body class="service-page matric-dance">
@@ -241,269 +243,9 @@
         </div>
       </section>
 
-      <!-- ─── 4. PACKAGES ──────────────────────── -->
-      <section id="sp-packages" aria-label="Matric Dance Packages">
-        <!-- Background image — swapped by JS on tab change -->
-        <div
-          class="sp-pkg-bg"
-          id="sp-pkg-bg"
-          style="background-image: url(&quot;assets/hero/premium-bg.jpg&quot;)"
-        ></div>
-        <div class="sp-pkg-overlay"></div>
-
-        <div class="sp-container">
-          <!-- Header -->
-          <div>
-            <span class="sp-section-tag">Packages</span>
-            <h2 class="sp-section-heading">Choose Your Package</h2>
-            <p class="sp-section-sub">
-              Every matric dance is a milestone. Pick the experience that fits
-              your vision — from solid coverage to a full cinematic production.
-            </p>
-          </div>
-
-          <!-- Tab Strip -->
-          <div class="sp-tabs" role="tablist" aria-label="Package tiers">
-            <button
-              class="sp-tab-btn active"
-              role="tab"
-              aria-selected="true"
-              aria-controls="sp-panel-premium"
-              id="sp-tab-premium"
-              onclick="spSwitchTab('premium')"
-            >
-              Premium
-            </button>
-            <button
-              class="sp-tab-btn"
-              role="tab"
-              aria-selected="false"
-              aria-controls="sp-panel-standard"
-              id="sp-tab-standard"
-              onclick="spSwitchTab('standard')"
-            >
-              Standard
-            </button>
-            <button
-              class="sp-tab-btn"
-              role="tab"
-              aria-selected="false"
-              aria-controls="sp-panel-basic"
-              id="sp-tab-basic"
-              onclick="spSwitchTab('basic')"
-            >
-              Basic
-            </button>
-          </div>
-
-          <!-- PREMIUM -->
-          <div
-            class="sp-panel active"
-            id="sp-panel-premium"
-            role="tabpanel"
-            aria-labelledby="sp-tab-premium"
-          >
-            <div class="sp-card sp-card--gold-top">
-              <div class="sp-card-header">
-                <div>
-                  <div class="sp-tier-badge">Premium</div>
-                  <h3 class="sp-card-title">Full Cinematic Experience</h3>
-                </div>
-                <div class="sp-price-block">
-                  <div class="sp-price-label">Starting From</div>
-                  <div class="sp-price">R12 500</div>
-                </div>
-              </div>
-              <div class="sp-card-body">
-                <div>
-                  <p class="sp-col-label">Your Team</p>
-                  <ul class="sp-team-list">
-                    <li>Photographer ×1</li>
-                    <li>Light Assistant ×1</li>
-                    <li>Videographer / Drone Operator ×1</li>
-                    <li>Video Editor</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="sp-col-label">What's Included</p>
-                  <ul class="sp-feature-list">
-                    <li>Drone Coverage</li>
-                    <li>Cameras ×2</li>
-                    <li>LED Tube Light</li>
-                    <li>Photography Lights ×2</li>
-                    <li>Champagne Props</li>
-                    <li>Flowers (Optional)</li>
-                    <li>Smoke Bomb Effects</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="sp-col-label">Deliverables</p>
-                  <ul class="sp-deliverable-list">
-                    <li>Digital Link — Photos &amp; Videos</li>
-                    <li>50 Professionally Edited Pictures</li>
-                    <li>10 High-End Retouched Pictures</li>
-                    <li>Short Documentary Video</li>
-                    <li>Cinematic Reel</li>
-                    <li>A3 Photo-book ×1</li>
-                    <li>A1 Canvas Photo ×1</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="sp-card-footer">
-                <p class="sp-note">
-                  Starting-from price. Transport &amp; accommodation excluded.
-                </p>
-                <a
-                  href="contact.html?service=matric-dance&package=premium"
-                  class="sp-book-btn"
-                >
-                  Book Now
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- STANDARD -->
-          <div
-            class="sp-panel"
-            id="sp-panel-standard"
-            role="tabpanel"
-            aria-labelledby="sp-tab-standard"
-          >
-            <div class="sp-card">
-              <div class="sp-card-header">
-                <div>
-                  <div class="sp-tier-badge">Standard</div>
-                  <h3 class="sp-card-title">Highlights Coverage</h3>
-                </div>
-                <div class="sp-price-block">
-                  <div class="sp-price-label">Starting From</div>
-                  <div class="sp-price">R8 500</div>
-                </div>
-              </div>
-              <div class="sp-card-body">
-                <div>
-                  <p class="sp-col-label">Your Team</p>
-                  <ul class="sp-team-list">
-                    <li>Photographer ×1</li>
-                    <li>Videographer ×1</li>
-                    <li>Video Editor</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="sp-col-label">What's Included</p>
-                  <ul class="sp-feature-list">
-                    <li>Drone Coverage</li>
-                    <li>Cameras ×2</li>
-                    <li>LED Lighting Setup</li>
-                    <li>Champagne Props</li>
-                    <li>Smoke Bomb Effects</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="sp-col-label">Deliverables</p>
-                  <ul class="sp-deliverable-list">
-                    <li>Digital Link — Photos &amp; Videos</li>
-                    <li>35 Edited Pictures</li>
-                    <li>5 Retouched Pictures</li>
-                    <li>Cinematic Reel</li>
-                    <li>Highlight Video</li>
-                    <li>A3 Photo-book ×1</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="sp-card-footer">
-                <p class="sp-note">
-                  Starting-from price. Transport &amp; accommodation excluded.
-                </p>
-                <a
-                  href="contact.html?service=matric-dance&package=standard"
-                  class="sp-book-btn"
-                >
-                  Book Now
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- BASIC -->
-          <div
-            class="sp-panel"
-            id="sp-panel-basic"
-            role="tabpanel"
-            aria-labelledby="sp-tab-basic"
-          >
-            <div class="sp-card">
-              <div class="sp-card-header">
-                <div>
-                  <div class="sp-tier-badge">Basic</div>
-                  <h3 class="sp-card-title">Essential Photo Coverage</h3>
-                </div>
-                <div class="sp-price-block">
-                  <div class="sp-price-label">Starting From</div>
-                  <div class="sp-price">R4 500</div>
-                </div>
-              </div>
-              <div class="sp-card-body">
-                <div>
-                  <p class="sp-col-label">Your Team</p>
-                  <ul class="sp-team-list">
-                    <li>Photographer ×1</li>
-                    <li>Assistant ×1</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="sp-col-label">What's Included</p>
-                  <ul class="sp-feature-list">
-                    <li>Camera Coverage</li>
-                    <li>Basic Lighting Setup</li>
-                    <li>Champagne Props</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="sp-col-label">Deliverables</p>
-                  <ul class="sp-deliverable-list">
-                    <li>Digital Link — Photos</li>
-                    <li>20 Edited Pictures</li>
-                    <li>3 Retouched Pictures</li>
-                    <li>Short Reel</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="sp-card-footer">
-                <p class="sp-note">
-                  Starting-from price. Transport &amp; accommodation excluded.
-                </p>
-                <a
-                  href="contact.html?service=matric-dance&package=basic"
-                  class="sp-book-btn"
-                >
-                  Book Now
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Disclaimer -->
-          <div class="sp-disclaimer" role="note">
-            <p>
-              <strong>Please note:</strong> All prices displayed are
-              starting-from prices. Transportation, accommodation, food, and
-              studio booking costs are excluded from all packages and charged
-              separately depending on location. Booking is confirmed only after
-              deposit payment.
-            </p>
-          </div>
-        </div>
+      <!-- ─── 4. PACKAGES ──────────────────────────── -->
+      <section id="sp-packages" data-service="matric-dance">
+        <div class="sp-pkg-container"></div>
       </section>
 
       <!-- ─── 6. FAQ ────────────────────────────── -->
@@ -700,8 +442,6 @@
             <h4 class="footer-col-title">Services</h4>
             <ul class="footer-links">
               <li><a href="matric-dance.html">Matric Dance</a></li>
-              <li><a href="photography.html">Photography</a></li>
-              <li><a href="videography.html">Videography</a></li>
               <li><a href="graduation.html">Graduation Shoot</a></li>
               <li><a href="photoshoot.html">Photoshoot</a></li>
               <li><a href="kids-shoot.html">Kid's Shoot</a></li>
@@ -801,10 +541,14 @@
 
     <!-- ─── SCRIPTS ──────────────────────────────── -->
     <script src="js/main.js"></script>
-    <script src="js/service-page.js"></script>
-    <script src="js/gallery-data.js"></script>
-    <script src="js/gallery.js"></script>
-    <script src="js/lightbox.js"></script>
-    <script src="js/service-page.js"></script>
+
+    <!-- Gallery Section Scripts -->
+    <script src="js/gallery/gallery-data.js"></script>
+    <script src="js/gallery/gallery.js"></script>
+    <script src="js/gallery/lightbox.js"></script>
+
+    <!-- Packages Section Scripts -->
+    <script src="js/packages/package-data.js"></script>
+    <script src="js/packages/package-render.js"></script>
   </body>
 </html>
