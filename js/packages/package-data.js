@@ -36,9 +36,15 @@ const packagesData = {
   ───────────────────────────────────────────── */
   "matric-dance": {
     type: "dual",
-    bgImage: "assets/matric-dance/pkg-bg.jpeg",
+    bgImage: "assets/matric-dance/mtd-3.png",
     heading: "Choose Your Package",
     subheading: "Every matric dance is a milestone. Pick the coverage type and experience that fits your vision — from solid coverage to a full cinematic production.",
+    steps: [
+      { number: "01", title: "Choose Coverage",      text: "Select Photo & Video, Photo Only, or Video Only" },
+      { number: "02", title: "Choose Package",       text: "Pick Premium, Standard, or Basic" },
+      { number: "03", title: "Book & Deposit",       text: "Submit your enquiry and pay 50% to secure your date" },
+      { number: "04", title: "Receive Confirmation", text: "We confirm your booking and prepare for your shoot" }
+    ],
     packages: {
       "pv-premium": {
         label: "Premium — Photo & Video",
@@ -247,9 +253,15 @@ const packagesData = {
   ───────────────────────────────────────────── */
   "graduation": {
     type: "dual",
-    bgImage: "assets/graduation/pkg-bg.jpeg",
+    bgImage: "assets/graduation/graduation.png",
     heading: "Choose Your Package",
     subheading: "Celebrate your achievement in cinematic style. Choose your coverage type and the package that matches your vision.",
+    steps: [
+      { number: "01", title: "Choose Coverage",      text: "Select Photo & Video, Photo Only, or Video Only" },
+      { number: "02", title: "Choose Package",       text: "Pick Premium, Standard, or Basic" },
+      { number: "03", title: "Book & Deposit",       text: "Submit your enquiry and pay 50% to secure your date" },
+      { number: "04", title: "Receive Confirmation", text: "We confirm your booking and prepare for your shoot" }
+    ],
     packages: {
       "pv-premium": {
         label: "Premium — Photo & Video",
@@ -470,9 +482,15 @@ const packagesData = {
   ───────────────────────────────────────────── */
   "photoshoot": {
     type: "dual",
-    bgImage: "assets/photoshoot/pkg-bg.jpeg",
+    bgImage: "assets/photoshoot/photoshoot (5).png",
     heading: "Choose Your Package",
     subheading: "Creative direction, cinematic lighting, and professional production — built around your vision. Choose your coverage and package below.",
+    steps: [
+      { number: "01", title: "Choose Coverage",      text: "Select Photo & Video, Photo Only, or Video Only" },
+      { number: "02", title: "Choose Package",       text: "Pick Premium, Standard, or Basic" },
+      { number: "03", title: "Book & Deposit",       text: "Submit your enquiry and pay 50% to secure your date" },
+      { number: "04", title: "Receive Confirmation", text: "We confirm your booking and prepare for your shoot" }
+    ],
     packages: {
       "pv-premium": {
         label: "Premium — Photo & Video",
@@ -687,9 +705,15 @@ const packagesData = {
   ───────────────────────────────────────────── */
   "kids-shoot": {
     type: "dual",
-    bgImage: "assets/kids-shoot/pkg-bg.jpeg",
+    bgImage: "assets/kids-shoot/kids-shoot-7.jpg",
     heading: "Choose Your Package",
     subheading: "Fun, creative, and kid-friendly production — capturing pure joy and unforgettable moments. Choose your coverage and package below.",
+    steps: [
+      { number: "01", title: "Choose Coverage",      text: "Select Photo & Video, Photo Only, or Video Only" },
+      { number: "02", title: "Choose Package",       text: "Pick Premium, Standard, or Basic" },
+      { number: "03", title: "Book & Deposit",       text: "Submit your enquiry and pay 50% to secure your date" },
+      { number: "04", title: "Receive Confirmation", text: "We confirm your booking and prepare for your shoot" }
+    ],
     packages: {
       "pv-premium": {
         label: "Premium — Photo & Video",
@@ -904,9 +928,15 @@ const packagesData = {
   ───────────────────────────────────────────── */
   "music-videos": {
     type: "single",
-    bgImage: "assets/music-videos/pkg-bg.jpeg",
+    bgImage: "assets/music-videos/music-video (13).jpg",
     heading: "Choose Your Package",
     subheading: "Full-scale music video productions from concept to delivery. Choose the package that matches your production scale and budget.",
+    steps: [
+      { number: "01", title: "Choose Package",       text: "Pick Premium, Standard, or Basic" },
+      { number: "02", title: "Book & Deposit",       text: "Submit your enquiry and pay 50% to secure your date" },
+      { number: "03", title: "Receive Confirmation", text: "We confirm your booking and prepare for your shoot" },
+      { number: "04", title: "Shoot & Delivery",     text: "We produce your content and deliver via private digital link" }
+    ],
     packages: {
       "premium": {
         label: "Premium",
@@ -982,9 +1012,15 @@ const packagesData = {
   ───────────────────────────────────────────── */
   "promo-videos": {
     type: "single",
-    bgImage: "assets/promo-videos/pkg-bg.jpeg",
+    bgImage: "assets/promo-videos/promo-video.jpg",
     heading: "Choose Your Package",
     subheading: "Cinematic promotional content that elevates your brand. Choose the package that fits your production needs.",
+    steps: [
+      { number: "01", title: "Choose Package",       text: "Pick Premium, Standard, or Basic" },
+      { number: "02", title: "Book & Deposit",       text: "Submit your enquiry and pay 50% to secure your date" },
+      { number: "03", title: "Receive Confirmation", text: "We confirm your booking and prepare for your shoot" },
+      { number: "04", title: "Shoot & Delivery",     text: "We produce your content and deliver via private digital link" }
+    ],
     packages: {
       "premium": {
         label: "Premium",
@@ -1058,9 +1094,15 @@ const packagesData = {
   ───────────────────────────────────────────── */
   "freelancing": {
     type: "rates",
-    bgImage: "assets/freelancing/pkg-bg.jpeg",
+    bgImage: "assets/freelance/freelance (5).jpg",
     heading: "Freelancing Rates",
     subheading: "Videography services with 8 hours coverage. Equipment excluded. Full payment required before the gig date.",
+    steps: [
+      { number: "01", title: "Choose Service",       text: "Select the event or occasion type from the rates table" },
+      { number: "02", title: "Book & Deposit",       text: "Submit your enquiry and pay in full to secure your date" },
+      { number: "03", title: "Receive Confirmation", text: "We confirm your booking and prepare for your gig" },
+      { number: "04", title: "Gig & Delivery",       text: "We cover your event and deliver your content digitally" }
+    ],
     note: "Rates apply to videography services only and do not include equipment hire. Transportation, food, and accommodation costs are excluded.",
     rates: [
       { service: "White & Traditional Wedding", rate: "R5 000", coverage: "8 Hours" },

@@ -89,6 +89,30 @@ const PackagesRenderer = (() => {
     </ul>`;
   }
 
+  function buildProcessStrip(steps) {
+    const items = steps.map((step, i) => {
+      const arrow = i < steps.length - 1
+        ? `<span class="sp-process-arrow" aria-hidden="true">${ICONS.arrow}</span>`
+        : '';
+      return `
+        <div class="sp-process-step">
+          <span class="sp-process-num">${step.number}</span>
+          <div class="sp-process-info">
+            <strong class="sp-process-title">${step.title}</strong>
+            <span class="sp-process-text">${step.text}</span>
+          </div>
+        </div>
+        ${arrow}`;
+    }).join('');
+
+    return `
+      <div class="sp-process" role="list" aria-label="How it works">
+        <div class="sp-process-inner">
+          ${items}
+        </div>
+      </div>`;
+  }
+
   function buildCard(pkg, key, service) {
     const premium = isPremium(key);
     const coverageHtml = pkg.coverage
@@ -465,6 +489,11 @@ const PackagesRenderer = (() => {
     }
 
     renderer(container, serviceData, activeService);
+
+    // Prepend the process strip above all rendered content
+    if (serviceData.steps && serviceData.steps.length) {
+      container.insertAdjacentHTML('afterbegin', buildProcessStrip(serviceData.steps));
+    }
   }
 
   document.addEventListener('DOMContentLoaded', init);

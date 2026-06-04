@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Ktwo Visuals Graduation Shoot Packages — Premium photography and videography for your graduation day."
+      content="Ktwo Visuals Graduation Packages — Premium photography and videography for your graduation day."
     />
     <title>Graduation Shoot — Ktwo Visuals</title>
 
@@ -21,9 +21,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- Service Page Shared Styles -->
     <link rel="stylesheet" href="css/service-page.css" />
+    <!-- Packages Section Styles -->
+    <link rel="stylesheet" href="css/packages.css" />
   </head>
 
-  <body class="service-page graduation-shoot">
+  <body class="service-page graduation">
     <!-- ─── NAVBAR (global) ─────────────────────── -->
     <nav class="navbar" id="navbar">
       <div class="nav-container">
@@ -50,17 +52,15 @@
       <section class="sp-hero" id="sp-hero">
         <div
           class="sp-hero-bg"
-          style="
-            background-image: url(&quot;assets/graduation/graduation (8).png&quot;);
-          "
+          style="background-image: url('assets/graduation/graduation.png')"
         ></div>
         <div class="sp-hero-overlay"></div>
         <div class="sp-hero-content">
           <span class="sp-hero-tag">Photography & Videography</span>
           <h1 class="sp-hero-heading">Graduation Shoot</h1>
           <p class="sp-hero-sub">
-            You worked hard for this moment — let us capture it the way it
-            deserves to be remembered.
+            Celebrating your achievement in cinematic style — every proud
+            moment, every emotion, preserved forever.
           </p>
           <div class="sp-hero-buttons">
             <a href="#sp-packages" class="sp-hero-btn-primary">View Packages</a>
@@ -76,22 +76,21 @@
           <div class="sp-intro-content">
             <span class="sp-intro-tag">About This Service</span>
             <h2 class="sp-intro-heading">
-              Your Graduation,<br />Captured in Style
+              Your Graduation,<br />Captured Forever
             </h2>
             <p class="sp-intro-body">
-              Graduation is more than just a ceremony — it is the result of
-              years of dedication, sacrifice, and growth. At Ktwo Visuals, we
-              treat your graduation shoot with the same cinematic seriousness
-              that the achievement itself deserves. From dramatic gown portraits
-              to candid family moments, we capture everything that makes your
-              day uniquely yours.
+              Your graduation is one of the most significant milestones of your
+              life — years of hard work, dedication, and sacrifice coming
+              together in a single powerful moment. At Ktwo Visuals, we treat
+              your graduation shoot with the same cinematic intention and
+              creative direction we bring to every production.
             </p>
             <p class="sp-intro-body">
-              Whether you are shooting on campus, at an outdoor location, or a
-              studio setting of your choice, our team arrives fully equipped and
-              creatively prepared. We handle the creative direction so you can
-              stay relaxed and present — while we make sure every frame tells
-              the story of your achievement.
+              From dramatic full-length gown portraits to candid celebrations
+              with family and friends, our team captures the full story of your
+              day. Whether you choose photography, videography, or both, you
+              will receive content that is timeless, beautifully edited, and
+              worthy of the achievement it represents.
             </p>
           </div>
 
@@ -120,8 +119,7 @@
                 <div class="sp-intro-list-text">
                   <span class="sp-intro-list-label">What's Included</span>
                   <span class="sp-intro-list-value"
-                    >Photography, videography, drone, lighting & creative
-                    direction</span
+                    >Photography, videography, drone, lighting & props</span
                   >
                 </div>
               </li>
@@ -143,8 +141,7 @@
                 <div class="sp-intro-list-text">
                   <span class="sp-intro-list-label">Who It's For</span>
                   <span class="sp-intro-list-value"
-                    >Graduates and their families celebrating the big
-                    achievement</span
+                    >Graduates and their families</span
                   >
                 </div>
               </li>
@@ -166,8 +163,7 @@
                 <div class="sp-intro-list-text">
                   <span class="sp-intro-list-label">Locations</span>
                   <span class="sp-intro-list-value"
-                    >Campus, outdoors, studio, or client choice —
-                    nationwide</span
+                    >Campus, outdoors, or client choice — nationwide</span
                   >
                 </div>
               </li>
@@ -232,10 +228,10 @@
             <span class="sp-gallery-tag">Our Work</span>
             <h2 class="sp-gallery-heading">Gallery</h2>
             <p class="sp-gallery-sub">
-              A selection of our graduation shoot photography and videography
-              work.
+              A selection of our graduation photography and videography work.
             </p>
           </div>
+          <!-- Grid is empty — built by JS from data file -->
           <div
             class="sp-gallery-grid"
             id="spGalleryGrid"
@@ -245,269 +241,10 @@
       </section>
 
       <!-- ─── 4. PACKAGES ──────────────────────── -->
-      <section id="sp-packages" aria-label="Graduation Shoot Packages">
-        <div
-          class="sp-pkg-bg"
-          id="sp-pkg-bg"
-          style="background-image: url(&quot;assets/hero/premium-bg.jpg&quot;)"
-        ></div>
+      <section id="sp-packages" data-service="graduation">
+        <div id="spPkgBg" class="sp-pkg-bg"></div>
         <div class="sp-pkg-overlay"></div>
-
-        <div class="sp-container">
-          <!-- Header -->
-          <div>
-            <span class="sp-section-tag">Packages</span>
-            <h2 class="sp-section-heading">Choose Your Package</h2>
-            <p class="sp-section-sub">
-              Your graduation is a once-in-a-lifetime achievement. Choose the
-              package that captures it the way it deserves.
-            </p>
-          </div>
-
-          <!-- Tab Strip -->
-          <div class="sp-tabs" role="tablist" aria-label="Package tiers">
-            <button
-              class="sp-tab-btn active"
-              role="tab"
-              aria-selected="true"
-              aria-controls="sp-panel-premium"
-              id="sp-tab-premium"
-              onclick="spSwitchTab('premium')"
-            >
-              Premium
-            </button>
-            <button
-              class="sp-tab-btn"
-              role="tab"
-              aria-selected="false"
-              aria-controls="sp-panel-standard"
-              id="sp-tab-standard"
-              onclick="spSwitchTab('standard')"
-            >
-              Standard
-            </button>
-            <button
-              class="sp-tab-btn"
-              role="tab"
-              aria-selected="false"
-              aria-controls="sp-panel-basic"
-              id="sp-tab-basic"
-              onclick="spSwitchTab('basic')"
-            >
-              Basic
-            </button>
-          </div>
-
-          <!-- PREMIUM -->
-          <div
-            class="sp-panel active"
-            id="sp-panel-premium"
-            role="tabpanel"
-            aria-labelledby="sp-tab-premium"
-          >
-            <div class="sp-card sp-card--gold-top">
-              <div class="sp-card-header">
-                <div>
-                  <div class="sp-tier-badge">Premium</div>
-                  <h3 class="sp-card-title">Full Cinematic Experience</h3>
-                </div>
-                <div class="sp-price-block">
-                  <div class="sp-price-label">Starting From</div>
-                  <div class="sp-price">R8 500</div>
-                </div>
-              </div>
-              <div class="sp-card-body">
-                <div>
-                  <p class="sp-col-label">Your Team</p>
-                  <ul class="sp-team-list">
-                    <li>Photographer ×1</li>
-                    <li>Light Assistant ×1</li>
-                    <li>Videographer ×1</li>
-                    <li>Video Editor</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="sp-col-label">What's Included</p>
-                  <ul class="sp-feature-list">
-                    <li>Cameras ×2</li>
-                    <li>Drone Coverage</li>
-                    <li>LED Tube Light</li>
-                    <li>Photography Lights ×2</li>
-                    <li>Creative Direction</li>
-                    <li>Graduation Gown Styling Assistance</li>
-                    <li>Champagne Props</li>
-                    <li>Flowers (Optional)</li>
-                    <li>Smoke Bomb Effects</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="sp-col-label">Deliverables</p>
-                  <ul class="sp-deliverable-list">
-                    <li>Digital Link — Photos & Videos</li>
-                    <li>50 Professionally Edited Pictures</li>
-                    <li>10 High-End Retouched Pictures</li>
-                    <li>Cinematic Graduation Highlight Video</li>
-                    <li>Cinematic Reel</li>
-                    <li>A3 Photo-book ×1</li>
-                    <li>A1 Canvas Photo ×1</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="sp-card-footer">
-                <p class="sp-note">
-                  Starting-from price. Transport & accommodation excluded.
-                </p>
-                <a
-                  href="contact.html?service=graduation&package=premium"
-                  class="sp-book-btn"
-                >
-                  Book Now
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- STANDARD -->
-          <div
-            class="sp-panel"
-            id="sp-panel-standard"
-            role="tabpanel"
-            aria-labelledby="sp-tab-standard"
-          >
-            <div class="sp-card">
-              <div class="sp-card-header">
-                <div>
-                  <div class="sp-tier-badge">Standard</div>
-                  <h3 class="sp-card-title">Highlights Coverage</h3>
-                </div>
-                <div class="sp-price-block">
-                  <div class="sp-price-label">Starting From</div>
-                  <div class="sp-price">R5 500</div>
-                </div>
-              </div>
-              <div class="sp-card-body">
-                <div>
-                  <p class="sp-col-label">Your Team</p>
-                  <ul class="sp-team-list">
-                    <li>Photographer ×1</li>
-                    <li>Videographer ×1</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="sp-col-label">What's Included</p>
-                  <ul class="sp-feature-list">
-                    <li>Camera Coverage</li>
-                    <li>Drone Coverage</li>
-                    <li>Lighting Setup</li>
-                    <li>Creative Direction</li>
-                    <li>Graduation Gown Styling Assistance</li>
-                    <li>Champagne Props</li>
-                    <li>Smoke Bomb Effects</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="sp-col-label">Deliverables</p>
-                  <ul class="sp-deliverable-list">
-                    <li>Digital Link — Photos & Videos</li>
-                    <li>30 Edited Pictures</li>
-                    <li>5 Retouched Pictures</li>
-                    <li>Highlight Video</li>
-                    <li>Cinematic Reel</li>
-                    <li>A3 Photo-book ×1</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="sp-card-footer">
-                <p class="sp-note">
-                  Starting-from price. Transport & accommodation excluded.
-                </p>
-                <a
-                  href="contact.html?service=graduation&package=standard"
-                  class="sp-book-btn"
-                >
-                  Book Now
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- BASIC -->
-          <div
-            class="sp-panel"
-            id="sp-panel-basic"
-            role="tabpanel"
-            aria-labelledby="sp-tab-basic"
-          >
-            <div class="sp-card">
-              <div class="sp-card-header">
-                <div>
-                  <div class="sp-tier-badge">Basic</div>
-                  <h3 class="sp-card-title">Essential Coverage</h3>
-                </div>
-                <div class="sp-price-block">
-                  <div class="sp-price-label">Starting From</div>
-                  <div class="sp-price">R3 500</div>
-                </div>
-              </div>
-              <div class="sp-card-body">
-                <div>
-                  <p class="sp-col-label">Your Team</p>
-                  <ul class="sp-team-list">
-                    <li>Photographer ×1</li>
-                    <li>Videographer ×1</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="sp-col-label">What's Included</p>
-                  <ul class="sp-feature-list">
-                    <li>Camera Coverage</li>
-                    <li>Basic Lighting Setup</li>
-                    <li>Creative Direction</li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="sp-col-label">Deliverables</p>
-                  <ul class="sp-deliverable-list">
-                    <li>Digital Link — Photos & Videos</li>
-                    <li>15 Edited Pictures</li>
-                    <li>Short Reel</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="sp-card-footer">
-                <p class="sp-note">
-                  Starting-from price. Transport & accommodation excluded.
-                </p>
-                <a
-                  href="contact.html?service=graduation&package=basic"
-                  class="sp-book-btn"
-                >
-                  Book Now
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Disclaimer -->
-          <div class="sp-disclaimer" role="note">
-            <p>
-              <strong>Please note:</strong> All prices displayed are
-              starting-from prices. Transportation, accommodation, food, and
-              studio booking costs are excluded from all packages and charged
-              separately depending on location. Booking is confirmed only after
-              deposit payment.
-            </p>
-          </div>
-        </div>
+        <div class="sp-pkg-container"></div>
       </section>
 
       <!-- ─── 5. FAQ ────────────────────────────── -->
@@ -517,82 +254,80 @@
             <span class="ct-faq-tag">FAQ</span>
             <h2 class="ct-faq-heading">Frequently Asked Questions</h2>
             <p class="ct-faq-sub">
-              Common questions about booking your graduation shoot.
+              Everything you need to know before booking your graduation
+              shoot.
             </p>
           </div>
 
           <div class="ct-faq-list">
             <div class="ct-faq-item">
               <button class="ct-faq-question" aria-expanded="false">
-                <span>When is the best time to book my graduation shoot?</span>
+                <span>How far in advance should I book?</span>
                 <div class="ct-faq-icon"><span></span><span></span></div>
               </button>
               <div class="ct-faq-answer">
                 <p>
-                  As early as possible. Graduation season is one of our busiest
-                  periods and popular dates fill up fast. We recommend booking
-                  at least 4 to 6 weeks in advance to secure your preferred date
-                  and time.
+                  We recommend booking at least 3 to 4 weeks before your
+                  graduation date. Graduation season is busy, so securing your
+                  date early with a deposit guarantees your spot.
                 </p>
               </div>
             </div>
 
             <div class="ct-faq-item">
               <button class="ct-faq-question" aria-expanded="false">
-                <span>Can the shoot happen on my graduation ceremony day?</span>
+                <span>Can the shoot happen on my actual graduation day?</span>
                 <div class="ct-faq-icon"><span></span><span></span></div>
               </button>
               <div class="ct-faq-answer">
                 <p>
-                  Yes. We can schedule your shoot around your ceremony — either
-                  before, after, or at a separate date and location of your
-                  choice. We work around your day to make sure everything runs
-                  smoothly.
+                  Yes. We can shoot on your actual graduation ceremony day or on
+                  a separate day of your choice. Many clients prefer a dedicated
+                  shoot day for a more relaxed and creative experience.
                 </p>
               </div>
             </div>
 
             <div class="ct-faq-item">
               <button class="ct-faq-question" aria-expanded="false">
-                <span>Can my family be included in the shoot?</span>
+                <span>What is included in the starting price?</span>
                 <div class="ct-faq-icon"><span></span><span></span></div>
               </button>
               <div class="ct-faq-answer">
                 <p>
-                  Absolutely. Family portraits are a big part of graduation
-                  shoots and we always make time to capture group shots
-                  alongside your individual portraits. Just let us know in
-                  advance how many people will be joining.
+                  Each package includes the team, equipment, and deliverables
+                  listed in the package details. Transportation, accommodation,
+                  food, and studio hire are not included and are charged
+                  separately depending on your location.
                 </p>
               </div>
             </div>
 
             <div class="ct-faq-item">
               <button class="ct-faq-question" aria-expanded="false">
-                <span>What should I wear or bring to my shoot?</span>
+                <span>How long does it take to receive my content?</span>
                 <div class="ct-faq-icon"><span></span><span></span></div>
               </button>
               <div class="ct-faq-answer">
                 <p>
-                  Your graduation gown is the centrepiece — we provide gown
-                  styling assistance on the day. We also recommend bringing a
-                  second outfit if you want variety in your shots. Our team will
-                  advise you on colours and styling during your consultation.
+                  Standard delivery is 7 to 14 working days after your shoot
+                  date. Urgent editing is available at an additional cost. You
+                  will receive a private digital download link once editing is
+                  complete and full payment has been received.
                 </p>
               </div>
             </div>
 
             <div class="ct-faq-item">
               <button class="ct-faq-question" aria-expanded="false">
-                <span>How long does the shoot take?</span>
+                <span>Can I bring family members to the shoot?</span>
                 <div class="ct-faq-icon"><span></span><span></span></div>
               </button>
               <div class="ct-faq-answer">
                 <p>
-                  Shoot duration depends on the package and the number of
-                  locations or outfit changes. On average a full graduation
-                  shoot takes between 1.5 to 3 hours. We will give you a clear
-                  time estimate during your booking consultation.
+                  Absolutely. Family portraits are a popular addition to
+                  graduation shoots. Let us know when booking so we can plan
+                  the shoot flow to include individual and group shots.
                 </p>
               </div>
             </div>
@@ -604,8 +339,8 @@
               </button>
               <div class="ct-faq-answer">
                 <p>
-                  Submit your inquiry via the contact form or WhatsApp. Once we
-                  confirm availability, a 50% deposit secures your date. Your
+                  Submit your enquiry through the contact form or reach out via
+                  WhatsApp. A 50% deposit is required to secure your date. Your
                   booking is only confirmed after the deposit has been received.
                 </p>
               </div>
@@ -622,11 +357,7 @@
         <span></span>
         <span></span>
       </button>
-      <button
-        class="sp-lightbox-prev"
-        id="spLightboxPrev"
-        aria-label="Previous"
-      >
+      <button class="sp-lightbox-prev" id="spLightboxPrev" aria-label="Previous">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -671,7 +402,7 @@
               class="footer-logo"
             />
             <p class="footer-tagline">A Moment Happens Once</p>
-            <a
+            
               href="https://wa.me/27797442467"
               target="_blank"
               class="footer-whatsapp"
@@ -731,55 +462,23 @@
             </ul>
             <div class="footer-socials">
               <a href="#" target="_blank" aria-label="Instagram">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0H8zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0H8zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
                 </svg>
               </a>
               <a href="#" target="_blank" aria-label="Facebook">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
                 </svg>
               </a>
               <a href="#" target="_blank" aria-label="TikTok">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0z"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0z"/>
                 </svg>
               </a>
               <a href="#" target="_blank" aria-label="YouTube">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
                 </svg>
               </a>
             </div>
@@ -802,9 +501,14 @@
 
     <!-- ─── SCRIPTS ──────────────────────────────── -->
     <script src="js/main.js"></script>
-    <script src="js/service-page.js"></script>
-    <script src="js/gallery-data.js"></script>
-    <script src="js/gallery.js"></script>
-    <script src="js/lightbox.js"></script>
+
+    <!-- Gallery Section Scripts -->
+    <script src="js/gallery/gallery-data.js"></script>
+    <script src="js/gallery/gallery.js"></script>
+    <script src="js/gallery/lightbox.js"></script>
+
+    <!-- Packages Section Scripts -->
+    <script src="js/packages/package-data.js"></script>
+    <script src="js/packages/package-render.js"></script>
   </body>
 </html>
