@@ -68,7 +68,7 @@
 .bk-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('/assets/hero/hm-hero-1.png');
+  background-image: url('../assets/hero/hm-hero-1.png');
   background-size: cover;
   background-position: center;
   transform: scale(1.06);
@@ -175,6 +175,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: auto;
   gap: 0;
 }
 
@@ -1071,7 +1072,7 @@
   }
 
   .bk-progress-line {
-    min-width: 20px;
+    min-width: 5px;
   }
 
   .bk-cal-day {

@@ -458,21 +458,18 @@
   color: var(--cream);
 }
 
-.sp-rates-coverage {
-  font-size: 12px;
-  color: var(--cream);
-  opacity: 0.5;
-  letter-spacing: 1px;
-}
-
 .sp-rates-price {
   font-size: 18px;
   font-weight: 800;
   color: var(--gold);
+  white-space: nowrap;
+  width: 1%;
 }
 
 .sp-rates-action {
   text-align: right;
+  width: 1%;
+  white-space: nowrap;
 }
 
 .sp-rates-book-btn {
@@ -662,7 +659,13 @@
   .sp-rates-table th,
   .sp-rates-row td,
   .sp-rates-row--alt td {
-    padding: 14px 16px;
+    padding: 14px 12px;
+  }
+
+  .sp-rates-book-btn {
+    padding: 9px 14px;
+    letter-spacing: 1px;
+    font-size: 9px;
   }
 }
 

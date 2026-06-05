@@ -411,7 +411,6 @@ const PackagesRenderer = (() => {
     const rows = data.rates.map((r, i) => `
       <tr class="${i % 2 === 0 ? 'sp-rates-row' : 'sp-rates-row sp-rates-row--alt'}">
         <td class="sp-rates-service">${r.service}</td>
-        <td class="sp-rates-coverage">${r.coverage}</td>
         <td class="sp-rates-price">${r.rate}</td>
         <td class="sp-rates-action">
           <a href="booking.html?service=${service}&type=${encodeURIComponent(r.service)}"
@@ -435,7 +434,6 @@ const PackagesRenderer = (() => {
           <thead>
             <tr>
               <th>Service</th>
-              <th>Coverage</th>
               <th>Rate</th>
               <th></th>
             </tr>

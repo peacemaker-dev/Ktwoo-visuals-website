@@ -1,162 +1,206 @@
-// ── TERMS CHECKBOX & SUBMIT ──────────────────
-/*
-const termsCheck = document.getElementById('termsCheck');
-const ctSubmit   = document.getElementById('ctSubmit');
+/**
+ * contact.js
+ * General enquiry form for contact.html
+ *
+ * DEPENDENCIES:
+ *   EmailJS CDN must be loaded before this file.
+ *   emailjs.init('YOUR_PUBLIC_KEY') must be called before this file.
+ *
+ * EMAILJS TEMPLATE VARIABLES:
+ *   {{fullName}}
+ *   {{phone}}
+ *   {{email}}
+ *   {{subject}}
+ *   {{message}}
+ *
+ * NOTE:
+ *   Use a separate EmailJS template from the booking form.
+ *   Suggested template name: ktwo_contact
+ */
 
-termsCheck.addEventListener('change', () => {
-  ctSubmit.disabled = !termsCheck.checked;
-});
+const ContactForm = (() => {
 
+  // ── ELEMENT CACHE ─────────────────────────────────────────
+  const el = {};
 
-// ── PHONE VALIDATION ─────────────────────────
-
-const phoneInput = document.getElementById('phone');
-
-phoneInput.addEventListener('input', () => {
-  // Strip everything except digits and +
-  let val = phoneInput.value.replace(/[^\d+]/g, '');
-  phoneInput.value = val;
-});
-
-phoneInput.addEventListener('blur', () => {
-  const val = phoneInput.value.trim();
-  const valid = /^(\+27|0)[6-8][0-9]{8}$/.test(val.replace(/\s/g, ''));
-  if (!valid && val.length > 0) {
-    phoneInput.style.borderColor = 'rgba(255, 80, 80, 0.6)';
-    phoneInput.style.background  = 'rgba(255, 80, 80, 0.04)';
-  } else {
-    phoneInput.style.borderColor = '';
-    phoneInput.style.background  = '';
+  function cacheElements() {
+    el.form     = document.getElementById('ctForm');
+    el.fullName = document.getElementById('fullName');
+    el.phone    = document.getElementById('phone');
+    el.email    = document.getElementById('email');
+    el.subject  = document.getElementById('subject');
+    el.message  = document.getElementById('message');
+    el.submit   = document.getElementById('ctSubmit');
+    el.success  = document.getElementById('ctSuccess');
+    el.error    = document.getElementById('ctError');
   }
-});
 
 
-// ── DATE VALIDATION ──────────────────────────
-// Prevent past dates from being selected
+  // ── VALIDATION ────────────────────────────────────────────
+  function isValidPhone(val) {
+    return /^(\+27|0)[6-8][0-9]{8}$/.test(val.replace(/\s/g, ''));
+  }
 
-const dateInput = document.getElementById('date');
-const today     = new Date().toISOString().split('T')[0];
-dateInput.setAttribute('min', today);
+  function isValidEmail(val) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
+  }
+
+  function validate() {
+    const name    = el.fullName.value.trim();
+    const phone   = el.phone.value.trim();
+    const email   = el.email.value.trim();
+    const subject = el.subject.value;
+    const message = el.message.value.trim();
+
+    if (name.length < 2)          return 'Please enter your full name.';
+    if (!isValidPhone(phone))     return 'Please enter a valid SA number e.g. 071 234 5678.';
+    if (!isValidEmail(email))     return 'Please enter a valid email address.';
+    if (!subject)                 return 'Please select a subject.';
+    if (message.length < 5)       return 'Please enter a message.';
+
+    return null;
+  }
 
 
-// ── FORM VALIDATION ──────────────────────────
+  // ── UI HELPERS ────────────────────────────────────────────
+  function showSuccess() {
+    el.success.style.display = 'flex';
+    el.error.style.display   = 'none';
+    el.form.reset();
+    el.submit.disabled    = false;
+    el.submit.textContent = 'Send Message';
+  }
 
-const ctForm   = document.getElementById('ctForm');
-const ctSuccess = document.getElementById('ctSuccess');
-const ctError   = document.getElementById('ctError');
+  function showError() {
+    el.error.style.display   = 'block';
+    el.success.style.display = 'none';
+    el.submit.disabled    = false;
+    el.submit.textContent = 'Send Message';
+  }
 
-function showMessage(el) {
-  el.classList.add('show');
-  setTimeout(() => el.classList.remove('show'), 6000);
-}
+  function hideMessages() {
+    el.success.style.display = 'none';
+    el.error.style.display   = 'none';
+  }
 
-function validateForm() {
-  const fields = ctForm.querySelectorAll('[required]');
-  let valid = true;
+  function setSending() {
+    el.submit.disabled    = true;
+    el.submit.textContent = 'Sending...';
+    hideMessages();
+  }
 
-  fields.forEach(field => {
-    if (!field.value.trim()) {
-      field.style.borderColor = 'rgba(255, 80, 80, 0.6)';
-      valid = false;
-    } else {
-      field.style.borderColor = '';
+
+  // ── SUBMIT ────────────────────────────────────────────────
+  function handleSubmit(e) {
+    e.preventDefault();
+    hideMessages();
+
+    const validationError = validate();
+    if (validationError) {
+      el.error.textContent   = validationError;
+      el.error.style.display = 'block';
+      return;
     }
-  });
 
-  // Phone check
-  const phone = phoneInput.value.trim().replace(/\s/g, '');
-  const phoneValid = /^(\+27|0)[6-8][0-9]{8}$/.test(phone);
-  if (!phoneValid) {
-    phoneInput.style.borderColor = 'rgba(255, 80, 80, 0.6)';
-    valid = false;
+    setSending();
+
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_CONTACT_TEMPLATE_ID', {
+      fullName: el.fullName.value.trim(),
+      phone:    el.phone.value.trim(),
+      email:    el.email.value.trim(),
+      subject:  el.subject.value,
+      message:  el.message.value.trim()
+    })
+    .then(() => {
+      showSuccess();
+    })
+    .catch(err => {
+      console.error('[contact.js] EmailJS error:', err);
+      el.error.textContent = 'Something went wrong. Please try again or reach out directly on WhatsApp.';
+      showError();
+    });
   }
 
-  return valid;
-}
 
-// Clear field error on input
-ctForm.querySelectorAll('input, select, textarea').forEach(field => {
-  field.addEventListener('input', () => {
-    field.style.borderColor = '';
-    field.style.background  = '';
-  });
-});
+  // ── FAQ ACCORDION ─────────────────────────────────────────
+  function initFaq() {
+    const items = document.querySelectorAll('.ct-faq-item');
 
+    items.forEach(item => {
+      const question = item.querySelector('.ct-faq-question');
+      const answer   = item.querySelector('.ct-faq-answer');
+      if (!question || !answer) return;
 
-// ── EMAILJS SUBMISSION ───────────────────────
+      question.addEventListener('click', () => {
+        const isOpen = question.getAttribute('aria-expanded') === 'true';
 
-ctForm.addEventListener('submit', (e) => {
-  e.preventDefault();
+        // Close all
+        items.forEach(other => {
+          other.querySelector('.ct-faq-question')
+            ?.setAttribute('aria-expanded', 'false');
+          other.querySelector('.ct-faq-answer')
+            ?.classList.remove('open');
+        });
 
-  if (!validateForm()) return;
-
-  ctSubmit.textContent    = 'Sending...';
-  ctSubmit.disabled       = true;
-
-  // EmailJS — replace with your actual IDs
-  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-    fullName : document.getElementById('fullName').value,
-    phone    : document.getElementById('phone').value,
-    email    : document.getElementById('email').value,
-    service  : document.getElementById('service').value,
-    package  : document.getElementById('package').value,
-    date     : document.getElementById('date').value,
-    location : document.getElementById('location').value,
-    notes    : document.getElementById('notes').value,
-  })
-  .then(() => {
-    ctForm.reset();
-    termsCheck.checked  = false;
-    ctSubmit.disabled   = true;
-    ctSubmit.textContent = 'Send Booking Request';
-    showMessage(ctSuccess);
-  })
-  .catch(() => {
-    ctSubmit.textContent = 'Send Booking Request';
-    ctSubmit.disabled   = false;
-    showMessage(ctError);
-  });
-});
-
-// ── TERMS & CONDITIONS MODAL ─────────────────
-
-const tcModalOverlay = document.getElementById('tcModalOverlay');
-const openTcModal    = document.getElementById('openTcModal');
-const tcModalClose   = document.getElementById('tcModalClose');
-const tcModalAgree   = document.getElementById('tcModalAgree');
-
-// Open modal
-openTcModal.addEventListener('click', () => {
-  tcModalOverlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
-});
-
-// Close via X button
-tcModalClose.addEventListener('click', () => {
-  tcModalOverlay.classList.remove('open');
-  document.body.style.overflow = '';
-});
-
-// Close via overlay click
-tcModalOverlay.addEventListener('click', (e) => {
-  if (e.target === tcModalOverlay) {
-    tcModalOverlay.classList.remove('open');
-    document.body.style.overflow = '';
+        // Open clicked if it was closed
+        if (!isOpen) {
+          question.setAttribute('aria-expanded', 'true');
+          answer.classList.add('open');
+        }
+      });
+    });
   }
-});
 
-// Close via Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && tcModalOverlay.classList.contains('open')) {
-    tcModalOverlay.classList.remove('open');
-    document.body.style.overflow = '';
+
+  // ── T&C MODAL ─────────────────────────────────────────────
+  function initTcModal() {
+    const overlay = document.getElementById('tcModalOverlay');
+    const openBtn = document.getElementById('openTcModal');
+    const closeBtn = document.getElementById('tcModalClose');
+    const agreeBtn = document.getElementById('tcModalAgree');
+
+    if (!overlay) return;
+
+    openBtn?.addEventListener('click', () => {
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeBtn?.addEventListener('click', closeTc);
+
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeTc();
+    });
+
+    agreeBtn?.addEventListener('click', closeTc);
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && overlay.classList.contains('open')) {
+        closeTc();
+      }
+    });
+
+    function closeTc() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
   }
-});
 
-// I Understand — tick checkbox and close
-tcModalAgree.addEventListener('click', () => {
-  termsCheck.checked  = true;
-  ctSubmit.disabled   = false;
-  tcModalOverlay.classList.remove('open');
-  document.body.style.overflow = '';
-});*/
+
+  // ── INIT ──────────────────────────────────────────────────
+  function init() {
+    cacheElements();
+
+    if (!el.form) {
+      console.warn('[contact.js] #ctForm not found.');
+      return;
+    }
+
+    el.form.addEventListener('submit', handleSubmit);
+    initFaq();
+    initTcModal();
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+
+})();
