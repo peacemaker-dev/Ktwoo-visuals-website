@@ -89,6 +89,18 @@ const PackagesRenderer = (() => {
     </ul>`;
   }
 
+  const COVERAGE_MAP = { pv: 'photo-video', po: 'photo-only', vo: 'video-only' };
+
+  function buildBookingUrl(service, key) {
+    const dash = key.indexOf('-');
+    if (dash !== -1 && COVERAGE_MAP[key.slice(0, dash)]) {
+      const coverage = COVERAGE_MAP[key.slice(0, dash)];
+      const tier = key.slice(dash + 1);
+      return `booking.html?service=${service}&package=${tier}&coverage=${coverage}`;
+    }
+    return `booking.html?service=${service}&package=${key}`;
+  }
+
   function buildProcessStrip(steps) {
     const items = steps.map((step, i) => {
       const arrow = i < steps.length - 1
@@ -176,7 +188,7 @@ const PackagesRenderer = (() => {
             <p class="sp-glass-note">
               Starting-from price. Transport, accommodation &amp; studio fees excluded.
             </p>
-            <a href="contact.html?service=${service}&package=${key}"
+            <a href="${buildBookingUrl(service, key)}"
               class="sp-glass-book-btn">
               Book This Package
               ${ICONS.arrow}
@@ -402,7 +414,7 @@ const PackagesRenderer = (() => {
         <td class="sp-rates-coverage">${r.coverage}</td>
         <td class="sp-rates-price">${r.rate}</td>
         <td class="sp-rates-action">
-          <a href="contact.html?service=${service}&type=${encodeURIComponent(r.service)}"
+          <a href="booking.html?service=${service}&type=${encodeURIComponent(r.service)}"
             class="sp-rates-book-btn">
             Book ${ICONS.arrow}
           </a>

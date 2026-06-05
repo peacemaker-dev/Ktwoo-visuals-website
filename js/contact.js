@@ -1,5 +1,5 @@
 // ── TERMS CHECKBOX & SUBMIT ──────────────────
-
+/*
 const termsCheck = document.getElementById('termsCheck');
 const ctSubmit   = document.getElementById('ctSubmit');
 
@@ -159,4 +159,4 @@ tcModalAgree.addEventListener('click', () => {
   ctSubmit.disabled   = false;
   tcModalOverlay.classList.remove('open');
   document.body.style.overflow = '';
-});
+});*/
