@@ -104,7 +104,7 @@ const ContactForm = (() => {
 
     setSending();
 
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_CONTACT_TEMPLATE_ID', {
+    emailjs.send('service_4hv70ko', 'template_pruccy7', {
       fullName: el.fullName.value.trim(),
       phone:    el.phone.value.trim(),
       email:    el.email.value.trim(),

@@ -687,7 +687,7 @@ const Booking = (() => {
       packageLabel = TIER_LABELS[state.tier] || '';
     }
 
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+    emailjs.send('service_4hv70ko', 'template_t7svvum', {
       service:  svc?.name || state.service,
       package:  packageLabel,
       fullName: state.fullName,

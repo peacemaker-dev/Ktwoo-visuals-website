@@ -49,15 +49,10 @@
     <link
       rel="icon"
       type="image/png"
-      sizes="32x32"
-      href="assets/favicon/favicon-32x32.png"
+      sizes="96x96"
+      href="assets/favicon/favicon-96x96.png"
     />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/favicon/favicon-16x16.png"
-    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
     <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
     <meta name="theme-color" content="#000000" />
@@ -805,7 +800,11 @@
     <!-- ─── SCRIPTS ──────────────────────────────── -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-      emailjs.init("YOUR_PUBLIC_KEY");
+      (function () {
+        emailjs.init({
+          publicKey: "KOSiNpAINx-0BopMH",
+        });
+      })();
     </script>
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
