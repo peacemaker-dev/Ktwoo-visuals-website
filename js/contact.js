@@ -122,36 +122,6 @@ const ContactForm = (() => {
   }
 
 
-  // ── FAQ ACCORDION ─────────────────────────────────────────
-  function initFaq() {
-    const items = document.querySelectorAll('.ct-faq-item');
-
-    items.forEach(item => {
-      const question = item.querySelector('.ct-faq-question');
-      const answer   = item.querySelector('.ct-faq-answer');
-      if (!question || !answer) return;
-
-      question.addEventListener('click', () => {
-        const isOpen = question.getAttribute('aria-expanded') === 'true';
-
-        // Close all
-        items.forEach(other => {
-          other.querySelector('.ct-faq-question')
-            ?.setAttribute('aria-expanded', 'false');
-          other.querySelector('.ct-faq-answer')
-            ?.classList.remove('open');
-        });
-
-        // Open clicked if it was closed
-        if (!isOpen) {
-          question.setAttribute('aria-expanded', 'true');
-          answer.classList.add('open');
-        }
-      });
-    });
-  }
-
-
   // ── T&C MODAL ─────────────────────────────────────────────
   function initTcModal() {
     const overlay = document.getElementById('tcModalOverlay');
@@ -197,7 +167,6 @@ const ContactForm = (() => {
     }
 
     el.form.addEventListener('submit', handleSubmit);
-    initFaq();
     initTcModal();
   }
 

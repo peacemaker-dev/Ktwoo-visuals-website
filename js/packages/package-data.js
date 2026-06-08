@@ -482,7 +482,7 @@ const packagesData = {
   ───────────────────────────────────────────── */
   "photoshoot": {
     type: "dual",
-    bgImage: "assets/photoshoot/photoshoot (5).png",
+    bgImage: "assets/photoshoot/photo (10).jpg",
     heading: "Choose Your Package",
     subheading: "Creative direction, cinematic lighting, and professional production — built around your vision. Choose your coverage and package below.",
     steps: [
@@ -1094,7 +1094,7 @@ const packagesData = {
   ───────────────────────────────────────────── */
   "freelancing": {
     type: "rates",
-    bgImage: "assets/freelance/freelance (5).jpg",
+    bgImage: "assets/freelance/freelance.jpeg",
     heading: "Freelancing Rates",
     subheading: "Videography services with 8 hours coverage. Equipment excluded. Full payment required before the gig date.",
     steps: [

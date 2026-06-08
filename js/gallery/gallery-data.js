@@ -28,7 +28,7 @@ const galleries = {
 
   "matric-dance": [
     { type: "image", src: "assets/matric-dance/mtd-1.png", alt: "Matric dance couple portrait" },
-    { type: "image", src: "assets/matric-dance/mtd-2.png", alt: "Matric dance full length shot" },
+  
     { type: "image", src: "assets/matric-dance/mtd-3.png", alt: "Matric dance group photo" },
     { type: "image", src: "assets/matric-dance/mtd-4.png", alt: "Matric dance candid moment" },
     { type: "image", src: "assets/matric-dance/mtd-5.png", alt: "Matric dance smoke bomb effect" },
@@ -75,12 +75,13 @@ const galleries = {
   "photoshoot": [
     { type: "image", src: "assets/photoshoot/photoshoot (14).png", alt: "Creative photoshoot portrait" },
     { type: "image", src: "assets/photoshoot/photoshoot (23).jpg", alt: "Photoshoot outdoor session" },
-    { type: "image", src: "assets/photoshoot/photoshoot (31).png", alt: "Photoshoot studio lighting" },
-    { type: "image", src: "assets/photoshoot/photoshoot (29).jpg", alt: "Photoshoot smoke bomb effects" },
+    { type: "image", src: "assets/photoshoot/freelance (9).jpg", alt: "Photoshoot studio lighting" },
+    { type: "image", src: "assets/photoshoot/freelance (6).jpg", alt: "Photoshoot smoke bomb effects" },
     { type: "image", src: "assets/photoshoot/photoshoot (10).png", alt: "Photoshoot creative direction" },
     { type: "image", src: "assets/photoshoot/photoshoot (25).jpg", alt: "Photoshoot cinematic edit" },
     { type: "image", src: "assets/photoshoot/photoshoot (7).png", alt: "Photoshoot champagne props" },
-    { type: "image", src: "assets/photoshoot/photoshoot (8).png", alt: "Photoshoot drone aerial shot" },
+    { type: "image", src: "assets/photoshoot/freelance (4).jpg", alt: "Photoshoot drone aerial shot" },
+    { type: "image", src: "assets/photoshoot/freelance (8).jpg", alt: "Photoshoot drone aerial shot" },
   ],
 
   "kids-shoot": [
@@ -96,12 +97,11 @@ const galleries = {
 
   "music-videos": [
     { type: "image", src: "assets/music-videos/music-video (13).jpg", alt: "Music video production behind the scenes" },
-    { type: "image", src: "assets/music-videos/music-video (2).jpg", alt: "Music video drone aerial shot" },
-    { type: "image", src: "assets/music-videos/music-video (3).jpg", alt: "Music video lighting setup" },
-    { type: "image", src: "assets/music-videos/music-video (4).jpg", alt: "Music video artist portrait" },
+    { type: "image", src: "assets/music-videos/music-video (12).jpg", alt: "Music video production behind the scenes" },
     { type: "image", src: "assets/music-videos/music-video (9).jpg", alt: "Music video cinematic frame" },
-    { type: "image", src: "assets/music-videos/music-video (10).jpg", alt: "Music video behind the scenes content" },
-    { type: "image", src: "assets/music-videos/music-video (7).jpg", alt: "Music video production team" },
+    { type: "image", src: "assets/music-videos/music-video (14).jpg", alt: "Music video cinematic frame" },
+    { type: "image", src: "assets/music-videos/music-video (15).jpg", alt: "Music video cinematic frame" },
+    { type: "image", src: "assets/music-videos/music-video (16).jpg", alt: "Music video cinematic frame" },
     { type: "image", src: "assets/music-videos/music-video (8).jpg", alt: "Music video outdoor location" },
   ],
 
