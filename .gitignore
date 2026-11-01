@@ -1,0 +1,14 @@
+# Local tooling
+.claude/
+
+# Hosting artefacts (managed by HostAfrica, not source)
+cgi-bin/
+
+# Misspelled duplicate of .htaccess — Apache never reads it
+.htacces
+
+# OS / editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp

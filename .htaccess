@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Force www to non-www
+RewriteCond %{HTTP_HOST} ^www\.ktwovisuals\.co\.za [NC]
+RewriteRule ^(.*)$ https://ktwovisuals.co.za/$1 [L,R=301]
+
+# Remove .html extension
+# If the request is not a file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^.]+)$ $1.html [L]
+
+# Redirect .html URLs to clean URLs
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
